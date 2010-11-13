@@ -1,0 +1,12 @@
+escape ^Tt
+termcap kterm hs@
+terminfo kterm hs@
+vbell off
+bind w windowlist -b
+hardstatus alwayslastline I%wI
+defhstatus I^En:^EtI
+shell -/bin/zsh
+startup_message off
+autodetach on
+caption always "%?%F%{= wg}%:%{= ww}%? %-w%{=bu dr}%n %t%{-}%+w %= %?%F%{=b .b}%:%{..}%?%y/%m/%d %?%F%{wm}%:%{..}%?%c"
+
