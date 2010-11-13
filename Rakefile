@@ -9,6 +9,7 @@ end
 
 task :default => :prepare
 task :prepare => %w(rcfiles:symlink)
+task :gems => %(packages:gems)
 
 namespace :rcfiles do
   task :symlink do
@@ -23,5 +24,19 @@ namespace :rcfiles do
       end
     end
   end
+
 end
 
+namespace :packages do
+  task :gems do
+    %w(bundler rails rspec wirble rvm).each do |gem|
+      begin
+        puts "gem: #{gem}"
+        sh "gem install #{gem}"
+      rescue 
+        warnp $!.class, $!.message
+      end
+    end
+  end
+
+end
