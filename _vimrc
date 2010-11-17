@@ -83,6 +83,14 @@ set nocompatible
 "* diff
 set foldmethod=marker
 
+" 現在のカーソルに下線をつける
+set cursorline
+highlight CursorLine ctermfg=Green
+
+" 現在のカーソル位置に縦線をつける
+" set cursorcolumn
+" highlight CursorColumn ctermfg=Green
+
 "  keybinds
 map gg 1G
 nnoremap ,a ]f
