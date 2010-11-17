@@ -1,2 +1,3 @@
 _ssh/id_rsa*
-
+_ssh/known_hosts
+tmp/*
