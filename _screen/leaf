@@ -1,0 +1,37 @@
+# .screenrc by Urabe Shyouhei.
+
+# This is for "leaf" screen, which directly invokes other programs in it.
+source defaults
+
+# Keys
+escape "^Tt"
+bind w windowlist -b
+zombie "^["
+bind "w" windowlist -b
+bind "^]" paste "[.]"
+bind "u" encoding "UTF-8"
+bind "e" encoding "eucJP"
+bind "s" encoding "SJIS"
+bind "j" focus "down"
+bind "k" focus "up"
+bind "h" focus "left"
+bind "l" focus "right"
+bind "v" split -v
+#setenv "LANG" "en_US.UTF-8"
+
+# Misc. settings
+shell "/bin/zsh"
+markkeys "h=^B:l=^F:$=^E:^U=^Z:^D=^V"
+msgwait 3
+msgminwait 2
+
+caption always "%?%F%{=r ..}%?%-Lw%40L>%?%F%{=b dR}%?%n%f* %t%?%F%{-}%?%+Lw"
+sorendition "+rb kw"
+
+defscrollback 8192
+
+# default screens
+chdir
+screen -U
+#screen -t zsh 0 zsh -l
+

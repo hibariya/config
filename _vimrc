@@ -24,7 +24,7 @@ let $LANG='c'
 set hlsearch
 set nrformats-=octal
 
-"インクリメンタルサーチを行う。 検索文字を打っている途中で、目的の単語を見つけたらEnterを押下すればよい。 検索をやめたい場合はEscを押下する。
+"インクリメンタルサーチを行う。 
 set incsearch
 
 "入力を開始したらマウスカーソルを隠す。 
@@ -153,7 +153,7 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 "  Autocompletion using the TAB key
 
 let g:neocomplcache_enable_at_startup = 1 
-let g:neocomplcache_max_list = 20
+let g:neocomplcache_max_list = 10
 let g:neocomplcache_keyword_completion_start_length = 2 
 let g:neocomplcache_min_keyword_length = 2 
 let g:neocomplcache_min_syntax_length = 2 

@@ -1,7 +1,12 @@
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH:$HOME/bin:.
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/bin:.
 export EDITOR=/usr/bin/vi
 export MANPATH=/opt/local/man:$MANPATH
 export LC_ALL=ja_JP.UTF-8
+
+export TERM=xterm-color
+export CLICOLOR=1
+#export LSCOLORS=DxGxcxdxCxegedabagacad
+export LSCOLORS=gxfxcxdxbxegedabagacad
 
 # 補完リストが多いときに尋ねる数
 # -1 : 尋ねない
@@ -9,4 +14,6 @@ export LC_ALL=ja_JP.UTF-8
 export LISTMAX=0
 
 export ARCHFLAGS="-arch x86_64"
+
+export PGDATA=/usr/local/var/postgres
 

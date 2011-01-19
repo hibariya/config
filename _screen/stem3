@@ -1,0 +1,20 @@
+# .screenrc by Urabe Shyouhei.
+
+# This is for "stem" screen, which recursively invokes screen
+source defaults
+
+caption always "%0`%=%1`"
+#backtick 0 0 0 ruby cpumonitor.rb
+#backtick 1 9 9 ruby batmonitor.rb
+
+#screen screen -S stem2 -qUmc .screen/stem2
+screen screen -S stem2 -qUmc .screen/stem2
+
+# Local Variables:
+# mode: Conf[space]
+# coding: utf-8-unix
+# indent-tabs-mode: nil
+# tab-width: 8
+# fill-column: 79
+# default-justification: full
+# End:

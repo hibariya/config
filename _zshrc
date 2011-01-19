@@ -32,19 +32,18 @@ setopt magic_equal_subst
 setopt print_eight_bit
 setopt auto_pushd
 
-function hist { history -E 1 }
-function reload { source ~/.zshrc }
-
 bindkey -v
 bindkey "^R" history-incremental-search-backward
 
 PROMPT2="%_%% "
 SPROMPT="%r is correct? [n,y,a,e]: " 
-PROMPT="%n@%m%% "
-RPROMPT="[%~ %D %T]"
+#PROMPT="%n@%m%% "
+PROMPT="%n@ ;-) "
+#RPROMPT="[%~ %D %T]"
+RPROMPT="[%~]"
 
 alias h='history -E -32'
-alias ll='ls -laF'
+alias ll='ls -laFG'
 alias v='vim'
 alias l='less'
 alias t='tail'
@@ -54,9 +53,19 @@ alias -g L=" | less "
 alias -g V=" | vim -R - "
 
 source ~/.zsh/*
-if [ $SHLVL = 1 ]; then screen; fi
+
+preexec(){ echo -ne "\ek${(z)2}\e\\" }
+reload() { source ~/.zshrc }
+
+if [ $SHLVL = 1 ]; then
+  export SCREENDIR=~/.screen/
+  screen
+fi
+
 #########################################################################
 
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 rvm use ruby-1.9.2-p0 >& /dev/null
+
+if [[ -e ~/.zshrc_local ]] then source ~/.zshrc_local ; fi
 
