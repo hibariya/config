@@ -1,22 +1,8 @@
-# .screenrc by Urabe Shyouhei.
-
 # This is for "stem" screen, which recursively invokes screen
 source defaults
 
-#caption always "[%Y/%m/%d %02C:%s %A] %h%-026=[GNU Screen of Git master]"
-caption always "%{=r kr}[%Y/%m/%d %c:%s %A] %{=r kb}%h%-054=%0`"
+caption always "%{=r kr}[%Y/%m/%d %c:%s %A] %{=r kb} %h %-055=%0`"
 backtick 0 5 5 .screen/uptime.rb
 
-# For convenience a leaf screen is invoked under a gpg-agent process.
-#screen gpg-agent --enable-ssh-support --daemon screen -S leaf -qUmc leaf
-#screen screen -S leaf -qUmc .screen/leaf
 screen screen -S leaf -qUmc .screen/leaf
 
-# Local Variables:
-# mode: Conf[space]
-# coding: utf-8-unix
-# indent-tabs-mode: nil
-# tab-width: 8
-# fill-column: 79
-# default-justification: full
-# End:

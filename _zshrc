@@ -31,6 +31,7 @@ setopt list_types
 setopt magic_equal_subst
 setopt print_eight_bit
 setopt auto_pushd
+setopt CORRECT_ALL
 
 bindkey -v
 bindkey "^R" history-incremental-search-backward
@@ -51,7 +52,7 @@ alias c='cat'
 alias tailf="tail -f"
 alias -g L=" | less "
 alias -g V=" | vim -R - "
-
+alias info='info --vi-keys'
 source ~/.zsh/*
 
 preexec(){ echo -ne "\ek${(z)2}\e\\" }

@@ -1,22 +1,9 @@
-# .screenrc by Urabe Shyouhei.
-
 # This is for "stem" screen, which recursively invokes screen
 source defaults
 
 caption always "%0`%=%1`"
+#backtick 0 15 15 .screen/vm_stat.rb
 backtick 0 10 10 .screen/syslog.rb
-#backtick 0 0 0 ruby netmonitor.rb
-#backtick 1 0 0 sudo ruby hddmonitor.rb
 
-#screen screen -S stem1 -qUmc stem1
-#screen screen -S stem1 -qUmc .screen/stem1
 screen screen -S stem1 -qUmc .screen/stem1
 
-# Local Variables:
-# mode: Conf[space]
-# coding: utf-8-unix
-# indent-tabs-mode: nil
-# tab-width: 8
-# fill-column: 79
-# default-justification: full
-# End:

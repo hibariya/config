@@ -12,7 +12,7 @@ set wildmode=list:longest
 set shellslash
 
 "検索で小文字なら大文字を無視、大文字なら無視しない設定。検索パターンが大文字を含んでいたら大文字と小文字を区別して検索。小文字のみの場合は、大文字と小文字を区別しないで検索する。
-set smartcase
+"set smartcase
 
 set iminsert=0
 set imsearch=0
@@ -111,11 +111,9 @@ nnoremap <unique> <silent> <space>ub :Unite buffer<CR>
 nnoremap <unique> <silent> <space>uf :Unite file<CR>
 nnoremap <unique> <silent> <space>um :Unite file_mru<CR>
 nnoremap <unique> <silent> <space>ur :Unite register<CR>
-nnoremap <unique> <silent> <space>u :Unite buffer register file_mru file<CR>
-nnoremap <unique> <silent> <space>x :qa<CR>
-nnoremap <unique> <silent> <space>xx :qa!<CR>
-nnoremap <unique> <silent> <space>c :q<CR>
-nnoremap <unique> <silent> <space>cc :q!<CR>
+nnoremap <unique> <silent> <space>ui :Unite buffer register file_mru file<CR>
+nnoremap <unique> <silent> <space>xx :qa<CR>
+nnoremap <unique> <silent> <space>qq :q<CR>
 
 autocmd FileType fuf nmap <C-c> <ESC>
 let g:fuf_patternSeparator = ' '
@@ -154,15 +152,21 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 let g:neocomplcache_enable_at_startup = 1 
 let g:neocomplcache_max_list = 10
-let g:neocomplcache_keyword_completion_start_length = 2 
-let g:neocomplcache_min_keyword_length = 2 
-let g:neocomplcache_min_syntax_length = 2 
-let g:neocomplcache_smart_case = 1 
-let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_max_keyword_width = 30
+let g:neocomplcache_auto_completion_start_length = 3
+let g:neocomplcache_manual_completion_start_length = 3
+let g:neocomplcache_min_keyword_length = 4
+let g:neocomplcache_min_syntax_length = 4
+let g:neocomplcache_enable_wildcard = 0
+let g:neocomplcache_enable_smart_case = 1
+"let g:neocomplcache_enable_camel_case_completion = 1
+"let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_dictionary_filetype_lists = {
             \ 'default' : '',
             \ 'ruby' : $HOME.'/.vim/dict/ruby.dict',
             \ 'php' : $HOME.'/.vim/dict/php.dict'
             \ }
+
+" workaround: Option 'omnifunc' is not set 
+setlocal omnifunc=syntaxcomplete#Complete
 
