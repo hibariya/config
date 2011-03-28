@@ -53,6 +53,10 @@ alias tailf="tail -f"
 alias -g L=" | less "
 alias -g V=" | vim -R - "
 alias info='info --vi-keys'
+alias bo='bundle open'
+alias be='bundle exec'
+alias g='git'
+alias h='heroku'
 source ~/.zsh/*
 
 preexec(){ echo -ne "\ek${(z)2}\e\\" }
