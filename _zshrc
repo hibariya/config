@@ -2,6 +2,27 @@
 autoload -U compinit
 compinit
 
+# show branch
+autoload -Uz vcs_info
+autoload -Uz is-at-least
+
+zstyle ':vcs_info:*' formats '[%s: %b]'
+zstyle ':vcs_info:*' actionformats '[%s: %b] (%a)'
+
+if is-at-least 4.3.10; then
+  zstyle ':vcs_info:git:*' check-for-changes true
+  zstyle ':vcs_info:git:*' stagedstr "(+_+)" 
+  zstyle ':vcs_info:git:*' unstagedstr "(-_-)"
+  zstyle ':vcs_info:git:*' formats '[%s: %b%c%u]'
+  zstyle ':vcs_info:git:*' actionformats '[%s: %b%c%u] (%a)'
+fi
+
+precmd () {
+  psvar=()
+  vcs_info
+  [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
+
 zstyle ':completion:*' verbose yes
 zstyle ':completion:*:descriptions' format '%B%d%b'
 zstyle ':completion:*:messages' format '%d'
@@ -13,17 +34,17 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:default' list-colors ${LS_COLORS}
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([%0-9]#)*=0=01;31'
 
-HISTFILE=~/.zsh_history    
+HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 setopt hist_ignore_all_dups
-setopt hist_ignore_dups    
-setopt share_history       
-setopt append_history      
+setopt hist_ignore_dups
+setopt share_history
+setopt append_history
 #setopt extended_history
-setopt inc_append_history  
-setopt hist_no_store       
-setopt hist_reduce_blanks  
+setopt inc_append_history
+setopt hist_no_store
+setopt hist_reduce_blanks
 setopt auto_cd
 setopt auto_menu
 setopt list_packed
@@ -36,17 +57,16 @@ setopt CORRECT_ALL
 bindkey -v
 bindkey "^R" history-incremental-search-backward
 
-PROMPT2="%_%% "
-SPROMPT="%r is correct? [n,y,a,e]: " 
+RPROMPT="[%~] %1(v|%F{blue}%1v%f|)"
 #PROMPT="%n@%m%% "
+SPROMPT="%r is correct? [n,y,a,e]: "
 PROMPT="%n@ ;-) "
 #RPROMPT="[%~ %D %T]"
-RPROMPT="[%~]"
 
 alias h='history -E -32'
 alias ll='ls -laFG'
+alias l='ls -laFG'
 alias v='vim'
-alias l='less'
 alias t='tail'
 alias c='cat'
 alias tailf="tail -f"
@@ -57,10 +77,13 @@ alias bo='bundle open'
 alias be='bundle exec'
 alias g='git'
 alias h='heroku'
+alias o='open'
+alias ggrep='git grep'
 source ~/.zsh/*
 
 preexec(){ echo -ne "\ek${(z)2}\e\\" }
 reload() { source ~/.zshrc }
+
 
 if [ $SHLVL = 1 ]; then
   export SCREENDIR=~/.screen/
@@ -70,7 +93,7 @@ fi
 #########################################################################
 
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
-rvm use ruby-1.9.2-p0 >& /dev/null
+rvm use ruby-1.9.2-p180 >& /dev/null
 
 if [[ -e ~/.zshrc_local ]] then source ~/.zshrc_local ; fi
 

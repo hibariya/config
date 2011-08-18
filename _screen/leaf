@@ -12,15 +12,19 @@ bind "^]" paste "[.]"
 bind "u" encoding "UTF-8"
 bind "e" encoding "eucJP"
 bind "s" encoding "SJIS"
-bind "j" focus "down"
-bind "k" focus "up"
-bind "h" focus "left"
-bind "l" focus "right"
+bind "J" focus "down"
+bind "K" focus "up"
+bind "H" focus "left"
+bind "L" focus "right"
 bind "v" split -v
+bind j exec | uim-fep -S
+bind k eval 'exec cat' kill redisplay
+
 #setenv "LANG" "en_US.UTF-8"
 
 # Misc. settings
-shell "/bin/zsh"
+#shell "/bin/zsh"
+shell "/usr/local/bin/zsh"
 markkeys "h=^B:l=^F:$=^E:^U=^Z:^D=^V"
 msgwait 3
 msgminwait 2
@@ -30,8 +34,12 @@ sorendition "+rb kw"
 
 defscrollback 8192
 
+defbce "on"
+term xterm-256color
+
 # default screens
 chdir
 screen -U
 #screen -t zsh 0 zsh -l
+
 

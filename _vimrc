@@ -1,139 +1,149 @@
-set history=1000
+set rtp+=~/.vim/vundle.git/
+call vundle#rc()
 
-"full 次のマッチを完全に補完する。最後のマッチの次には元の文字列が使われ、その次は再び最初のマッチが補完される。
-"longest 共通する最長の文字列までが補完される。それ以上長い文字列を補完できないときは、次の候補に移る。
-"longest:full longest と似ているが、'wildmenu' が有効ならばそれを開始する。
-"list 複数のマッチがあるときは、全てのマッチを羅列する。
-"list:full 複数のマッチがあるときは、全てのマッチを羅列し、最初のマッチを補完する。
-"list:longest 複数のマッチがあるときは、全てのマッチを羅列し、共通する最長の文字列までが補完される。
-set wildmode=list:longest
+Bundle 'opsplorer'
+Bundle 'endwise.vim'
+Bundle 'haml.zip'
+Bundle 'git-commit'
+Bundle 'rails.vim'
+Bundle 'surround.vim'
+Bundle 'YankRing.vim'
+Bundle 'newspaper.vim'
+Bundle 'xoria256.vim'
+Bundle 'mrkn256.vim'
+Bundle 'quickrun.vim'
+Bundle 'vimwiki'
+Bundle 'git://github.com/vim-ruby/vim-ruby.git'
+Bundle 'git://github.com/motemen/git-vim.git'
+Bundle 'git://github.com/Shougo/neocomplcache.git'
+Bundle 'git://github.com/h1mesuke/vim-alignta.git'
 
-"ファイル名の展開にスラッシュを使う。
-set shellslash
+Bundle 'git://github.com/Shougo/unite.vim.git'
+Bundle 'git://github.com/ujihisa/unite-colorscheme.git'
+Bundle 'git://github.com/h1mesuke/unite-outline.git'
+Bundle 'git://github.com/ujihisa/unite-font.git'
+Bundle 'https://github.com/ujihisa/unite-locate.git'
 
-"検索で小文字なら大文字を無視、大文字なら無視しない設定。検索パターンが大文字を含んでいたら大文字と小文字を区別して検索。小文字のみの場合は、大文字と小文字を区別しないで検索する。
-"set smartcase
+Bundle 'git://github.com/tsukkee/unite-help.git'
+Bundle 'matchit.zip'
+Bundle 'git://github.com/motemen/hatena-vim.git'
+Bundle 'cucumber.zip'
+Bundle 'git://github.com/kchmck/vim-coffee-script.git'
+Bundle 'Command-T'
 
-set iminsert=0
-set imsearch=0
-set encoding=UTF8
-set grepprg=/usr/bin/grep\ -n
-let $LANG='c'
+"filetype off
+filetype on
+filetype indent on
+filetype plugin on
+"syntax enable
+syntax on
 
-"検索結果をハイライトする
-set hlsearch
-set nrformats-=octal
+set t_Co=256
+set background=dark
+colorscheme desert
+let g:colors_name = "xoria256"
+let g:colors_name = "newspaper"
 
-"インクリメンタルサーチを行う。 
-set incsearch
-
-"入力を開始したらマウスカーソルを隠す。 
-set mousehide
-
-"コマンドラインに使われる画面上の行数
-set ch=2
-
-set ts=2 sw=2 sts=2
-
-" バックアップを作らない
-set nobackup
-
-" 折り返し表示させない
-set nowrap
-
-" ブザーをならさない
-set noerrorbells
-
-set nu
-
-" 検索時に大文字小文字を区別しない
-" set ignorecase
-
-" undoできる回数
-set undolevels=1000
-
-" vim からshellを起動するときの
-set shell=zsh
-
-" すべてのタブを適当な空白に
-set expandtab
-
-set autoindent
-
-" backspaceで改行を云々できる？
-set backspace=2
-
-" 検索をファイルの末尾まで検索したら、ファイルの先頭へループする。 
-set wrapscan
-
-" 編集中のファイル名をターミナルのタイトルに
-set title
-
-" フォント
-" set guifont=VL_Gothic:h12:cUTF8
-
-" vi互換モードOFF
+set ambiwidth=double
+set autoread
+set hidden
+set number
+set showmatch
+set ttymouse=xterm2
+set wildmode=longest:list
 set nocompatible
 
-"* manual
-"* indent
-"* expr
-"* marker
-"* syntax
-"* diff
+set directory-=.
+
+"backup
+set nobackup
+
+"encoding
+set enc=utf-8
+set fenc=utf-8
+set fencs=utf-8,iso-2022-jp,euc-jp,cp932
+set fileformats=unix,dos
+
+" Tab
+"set expandtab
+set smartindent
+set ts=2 sw=2 sts=2
+
+"statusline
+set laststatus=2
+set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}%=%l,%c%v%8p
+
+"自動的に QuickFix リストを表示する
+autocmd QuickfixCmdPost make,grep,ggrep,grepadd,vimgrep,vimgrepadd cwin
+autocmd QuickfixCmdPost lmake,lgrep,lgrepadd,lvimgrep,lvimgrepadd lwin
+
+" clipboard
+set clipboard+=unnamed
+
+" <Leader>
+inoremap <Leader>date <C-R>=strftime('%Y/%m/%d(%a)')<CR>
+inoremap <Leader>time <C-R>=strftime('%H:%M:%S')<CR>
+
+" git-commit.vim
+let git_diff_spawn_mode = 1
+
+" git-vim
+let g:git_command_edit = 'rightbelow vnew'
+
+"set grepprg=internal
+set history=1000
+set wildmode=list:longest
+set hlsearch
+set nrformats-=octal
+set incsearch
+set mousehide
+set nowrap
+set noerrorbells
+set ignorecase
+set undolevels=1000
+set shell=zsh
+set expandtab
+set autoindent
+set backspace=2
+set wrapscan
+set title
 set foldmethod=marker
-
-" 現在のカーソルに下線をつける
 set cursorline
-highlight CursorLine ctermfg=Green
+highlight CursorLine ctermfg=Green gui=underline
 
-" 現在のカーソル位置に縦線をつける
-" set cursorcolumn
-" highlight CursorColumn ctermfg=Green
+"set guifont=Ricty:h26:cUTF-8
 
-"  keybinds
-map gg 1G
-nnoremap ,a ]f
-nnoremap ,n [f
+" keybinds
 nnoremap ; :
 nnoremap <unique> <silent> tab :tabnew<CR>
 nnoremap <unique> <silent> tn :tabnext<CR>
 nnoremap <unique> <silent> tp :tabprevious<CR>
+nnoremap <unique> <silent> tf :tabfirst<CR>
+nnoremap <unique> <silent> tl :tablast<CR>
 nnoremap <unique> <silent> fi :Opsplore<CR>
-nnoremap <unique> <silent> <space>gre :Grep<space>
+nnoremap <unique> <silent> ya :YRShow<CR>
+nnoremap <unique> <silent> <space>tm :tabm<space>
+nnoremap <unique> <silent> <space>gre :vimgrep<space>/
 nnoremap <unique> <silent> <space>rails :Rails<space>
 nnoremap <unique> <silent> <space>rake :Rake<space>
-nnoremap <unique> <silent> <space>fb :FufBuffer!<CR>
-nnoremap <unique> <silent> <space>ff :FufFile!<CR>
-nnoremap <unique> <silent> <space>fm :FufMruFile!<CR>
-nnoremap <unique> <silent> <space>fc :FufRenewCache<CR>
+nnoremap <unique> <silent> <space>rr :R<CR>
+nnoremap <unique> <silent> <space>vw :Rview<CR>
+nnoremap <unique> <silent> <space>mo :Rmodel<CR>
+nnoremap <unique> <silent> <space>co :Rcontroller<CR>
+nnoremap <unique> <silent> <space>log :Rlog<CR>
 nnoremap <unique> <silent> <space>ub :Unite buffer<CR>
 nnoremap <unique> <silent> <space>uf :Unite file<CR>
 nnoremap <unique> <silent> <space>um :Unite file_mru<CR>
 nnoremap <unique> <silent> <space>ur :Unite register<CR>
-nnoremap <unique> <silent> <space>ui :Unite buffer register file_mru file<CR>
+nnoremap <unique> <silent> <space>uo :Unite outline<CR>
+nnoremap <unique> <silent> <space>ul :Unite locate<CR>
+nnoremap <unique> <silent> <space>uc :Unite colorscheme<CR>
+nnoremap <unique> <silent> <space>ufo :Unite font<CR>
+nnoremap <unique> <silent> <space>ui :Unite buffer tab window register file_mru directory_mru file bookmark<CR>
 nnoremap <unique> <silent> <space>xx :qa<CR>
 nnoremap <unique> <silent> <space>qq :q<CR>
 
-autocmd FileType fuf nmap <C-c> <ESC>
-let g:fuf_patternSeparator = ' '
-let g:fuf_modesDisable = ['mrucmd']
-let g:fuf_mrufile_exclude = '\v\.DS_Store|\.git|\.swp|\.svn'
-let g:fuf_mrufile_maxItem = 100
-let g:fuf_enumeratingLimit = 20
-let g:fuf_file_exclude = '\v\.DS_Store|\.git|\.swp|\.svn'
-
-syntax on
-filetype on
-filetype indent on
-filetype plugin on
-
-"rubycomplete.vim
-let g:rubycomplete_buffer_loading = 1
-let g:rubycomplete_rails = 1
-let g:rubycomplete_classes_in_global = 1
-
-"  Autocompletion + <TAB>で補完 
+" Autocompletion + <TAB>で補完
 function! InsertTabWrapper()
   let col = col('.') - 1
   if !col || getline('.')[col - 1] !~ '\k'
@@ -150,7 +160,7 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 "  Autocompletion using the TAB key
 
-let g:neocomplcache_enable_at_startup = 1 
+let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_max_list = 10
 let g:neocomplcache_max_keyword_width = 30
 let g:neocomplcache_auto_completion_start_length = 3
@@ -159,14 +169,20 @@ let g:neocomplcache_min_keyword_length = 4
 let g:neocomplcache_min_syntax_length = 4
 let g:neocomplcache_enable_wildcard = 0
 let g:neocomplcache_enable_smart_case = 1
-"let g:neocomplcache_enable_camel_case_completion = 1
-"let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_dictionary_filetype_lists = {
             \ 'default' : '',
             \ 'ruby' : $HOME.'/.vim/dict/ruby.dict',
             \ 'php' : $HOME.'/.vim/dict/php.dict'
             \ }
 
-" workaround: Option 'omnifunc' is not set 
+" workaround: Option 'omnifunc' is not set
 setlocal omnifunc=syntaxcomplete#Complete
 
+highlight WhitespaceEOL ctermbg=red guibg=red
+match WhitespaceEOL /\s\+$/
+
+" for Hatena.vim
+:let g:hatena_user='hibariya'
+
+" Align.vim
+:let g:Align_xstrlen = 3

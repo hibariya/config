@@ -4,6 +4,8 @@
 source defaults
 
 caption always "%0`%=%1`"
+backtick 0 0 0 uim-fep-tick
+#hardstatus alwayslastline "%0`"
 ##backtick 0 0 0 sudo ruby logmonitor.rb
 #backtick 0 5 5 uptime
 #backtick 0 10 10 .screen/syslog.rb

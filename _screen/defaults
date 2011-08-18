@@ -18,6 +18,7 @@ hardstatus on
 
 # To use 256 colors. AB/AF are also screen specific.
 termcapinfo xterm*|kterm*|screen* Co#256:pa#32767:AB=\E[48;5;%dm:AF=\E[38;5;%dm
+#termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm:ti@:te@'
 defbce on
 
 # To use resize-window

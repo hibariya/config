@@ -1,6 +1,12 @@
-require 'rubygems'
-require 'wirble'
+begin
+  Readline.vi_editing_mode
 
-Wirble.init 
-Wirble.colorize
+  require 'rubygems'
+  require 'wirble'
 
+  Wirble.init
+  Wirble.colorize
+rescue Exception
+  puts $!.class
+  puts $!.message
+end
