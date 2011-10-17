@@ -4,21 +4,6 @@
 source defaults
 
 caption always "%0`%=%1`"
-backtick 0 0 0 uim-fep-tick
-#hardstatus alwayslastline "%0`"
-##backtick 0 0 0 sudo ruby logmonitor.rb
-#backtick 0 5 5 uptime
-#backtick 0 10 10 .screen/syslog.rb
+backtick 0 10 10 .screen/syslog.rb 2
 
-#screen screen -S stem3 -qUmc stem3
-#screen screen -S stem3 -qUmc .screen/stem3
 screen screen -S stem3 -qUmc .screen/stem3
-
-# Local Variables:
-# mode: Conf[space]
-# coding: utf-8-unix
-# indent-tabs-mode: nil
-# tab-width: 8
-# fill-column: 79
-# default-justification: full
-# End:

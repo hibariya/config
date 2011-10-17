@@ -2,3 +2,4 @@ _ssh/id_rsa*
 _ssh/known_hosts
 _ssh/config
 tmp/*
+_screen/.termcap

@@ -1,7 +1,3 @@
-# Keys
-# \233 is "Meta-Ctrl-[", or "Meta-Esc".
-#escape \233\233 # いろんな漢字が打てなくなたお
-
 # no zombie ... upper screen termination should propagate to this one.
 zombie
 
@@ -18,7 +14,6 @@ hardstatus on
 
 # To use 256 colors. AB/AF are also screen specific.
 termcapinfo xterm*|kterm*|screen* Co#256:pa#32767:AB=\E[48;5;%dm:AF=\E[38;5;%dm
-#termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm:ti@:te@'
 defbce on
 
 # To use resize-window
@@ -55,7 +50,3 @@ autonuke on
 
 # Dsiable scroll buffer, should be implemented in upper screens.
 defscrollback 0
-
-# chdir is useful for invoking scripts there.
-#chdir /home/hibariya/.screen
-

@@ -1,6 +1,7 @@
 # .screenrc by Urabe Shyouhei.
 
 # This is for "leaf" screen, which directly invokes other programs in it.
+
 source defaults
 
 # Keys
@@ -17,13 +18,9 @@ bind "K" focus "up"
 bind "H" focus "left"
 bind "L" focus "right"
 bind "v" split -v
-bind j exec | uim-fep -S
 bind k eval 'exec cat' kill redisplay
 
-#setenv "LANG" "en_US.UTF-8"
-
 # Misc. settings
-#shell "/bin/zsh"
 shell "/usr/local/bin/zsh"
 markkeys "h=^B:l=^F:$=^E:^U=^Z:^D=^V"
 msgwait 3
@@ -40,6 +37,3 @@ term xterm-256color
 # default screens
 chdir
 screen -U
-#screen -t zsh 0 zsh -l
-
-

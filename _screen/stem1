@@ -1,8 +1,6 @@
 # This is for "stem" screen, which recursively invokes screen
 source defaults
 
-caption always "%{=r kr}[%Y/%m/%d %c:%s %A] %{=r kb} %h %-055=%0`"
-backtick 0 5 5 .screen/uptime.rb
+caption always "%{=r kr}[%Y/%m/%d %c:%s %A] %{=r kb} %h"
 
 screen screen -S leaf -qUmc .screen/leaf
-
