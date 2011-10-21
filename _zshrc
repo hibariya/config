@@ -62,7 +62,9 @@ setopt CORRECT_ALL
 bindkey -e
 bindkey "^R" history-incremental-search-backward
 bindkey "^S" history-incremental-search-forward
-bindkey "^p" up-line-or-history
+#bindkey "^p" up-line-or-history
+bindkey '^P' history-beginning-search-backward
+bindkey '^N' history-beginning-search-forward
 bindkey -a 'q' push-line
 
 SPROMPT="%r is correct? [n,y,a,e]: "
