@@ -17,7 +17,7 @@ bind "J" focus "down"
 bind "K" focus "up"
 bind "H" focus "left"
 bind "L" focus "right"
-bind "v" split -v
+#bind "v" split -v
 bind k eval 'exec cat' kill redisplay
 
 # Misc. settings
@@ -36,4 +36,4 @@ term xterm-256color
 
 # default screens
 chdir
-screen -U
+#screen -U

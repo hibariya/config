@@ -1,3 +1,5 @@
+escape "^Tt"
+
 # no zombie ... upper screen termination should propagate to this one.
 zombie
 
@@ -33,7 +35,7 @@ autodetach off
 startup_message off
 
 # No login, otherwise /var/run/utemp will be squashed.
-deflogin off
+#deflogin off
 
 # obuflimit and  autonuke can be controlled via  termcap, but we do  not have a
 # way to get those values...
