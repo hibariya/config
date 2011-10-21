@@ -1,5 +1,6 @@
 begin
-  Readline.vi_editing_mode
+  #Readline.vi_editing_mode
+  Readline.emacs_editing_mode
 
   require 'rubygems'
   require 'wirble'
