@@ -1,4 +1,4 @@
-escape "^Tt"
+escape "\233\233"
 
 # no zombie ... upper screen termination should propagate to this one.
 zombie

@@ -6,7 +6,6 @@ source defaults
 
 # Keys
 escape "^Tt"
-bind w windowlist -b
 zombie "^["
 bind "w" windowlist -b
 bind "^]" paste "[.]"
