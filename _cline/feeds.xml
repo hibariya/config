@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+<head>
+    <title>livedoor Reader Subscriptions</title>
+    <dateCreated>Sat, 29 Oct 2011 07:39:38 UTC</dateCreated>
+    <ownerName>hibariya</ownerName>
+</head>
+<body>
+<outline title="Subscriptions">
+      <outline title="Pinboard (Popular items from Pinboard)" htmlUrl="http://pinboard.in" type="rss" xmlUrl="http://feeds.pinboard.in/rss/popular/" />
+      <outline title="Strategic Choice" htmlUrl="http://d.hatena.ne.jp/asakichy/" type="rss" xmlUrl="http://d.hatena.ne.jp/asakichy/rss" />
+      <outline title="Joy Luck Craven" htmlUrl="http://retter.heroku.com/" type="rss" xmlUrl="http://retter.heroku.com/entries.rss" />
+      <outline title="Joy Luck Crab" htmlUrl="http://hibariya.github.com/" type="rss" xmlUrl="http://hibariya.github.com/entries.rss" />
+    <outline title="*">
+      <outline title="さとやｎ Blog" htmlUrl="http://blog.livedoor.jp/satoyansoft/" type="rss" xmlUrl="http://blog.livedoor.jp/satoyansoft/index.rdf" />
+      <outline title="RSSS | hibariya" htmlUrl="http://rsss.be/hibariya" type="rss" xmlUrl="http://rsss.be/hibariya.xml" />
+      <outline title="HajimeHoshi.com" htmlUrl="http://hajimehoshi.com/" type="rss" xmlUrl="http://hajimehoshi.com/feed" />
+      <outline title="まつもとメタクエリ" htmlUrl="http://matsumotoq.tumblr.com/" type="rss" xmlUrl="http://matsumotoq.tumblr.com/rss" />
+      <outline title="t-wadaの日記" htmlUrl="http://d.hatena.ne.jp/t-wada/" type="rss" xmlUrl="http://d.hatena.ne.jp/t-wada/rss" />
+      <outline title="Stories" htmlUrl="http://feeds.digg.com/digg/popular" type="rss" xmlUrl="http://feeds.digg.com/digg/popular.rss" />
+      <outline title="おもしろWEBサービス開発日記" htmlUrl="http://d.hatena.ne.jp/willnet/" type="rss" xmlUrl="http://d.hatena.ne.jp/willnet/rss" />
+      <outline title="もちおのWEBアプリ開発日記" htmlUrl="http://d.hatena.ne.jp/hagaeru3sei/" type="rss" xmlUrl="http://d.hatena.ne.jp/hagaeru3sei/rss" />
+      <outline title="s/.*//" htmlUrl="http://d.hatena.ne.jp/chobie/" type="rss" xmlUrl="http://d.hatena.ne.jp/chobie/rss" />
+      <outline title="サイボウズ・ロボ戦記" htmlUrl="http://labs.cybozu.co.jp/blog/amachang/" type="rss" xmlUrl="http://labs.cybozu.co.jp/blog/amachang/atom.xml" />
+      <outline title="masuidrive on rails" htmlUrl="http://blog.masuidrive.jp" type="rss" xmlUrl="http://blog.masuidrive.jp/xml/rss" />
+      <outline title="co&amp;#xFF98;・ー・&amp;#xFF9D;＜2nd life" htmlUrl="http://d.hatena.ne.jp/secondlife/" type="rss" xmlUrl="http://d.hatena.ne.jp/secondlife/rss" />
+      <outline title="レジデント初期研修用資料" htmlUrl="http://medt00lz.s59.xrea.com/blog/" type="rss" xmlUrl="http://medt00lz.s59.xrea.com/blog/atom.xml" />
+      <outline title="くsぎあhまやいgのnんいっき" htmlUrl="http://ukgk.g.hatena.ne.jp/kusigahama/" type="rss" xmlUrl="http://ukgk.g.hatena.ne.jp/kusigahama/rss2" />
+      <outline title="鈍重な開発を俊敏にしていく日記" htmlUrl="http://agile.g.hatena.ne.jp/yugui/" type="rss" xmlUrl="http://agile.g.hatena.ne.jp/yugui/rss2" />
+      <outline title="ヽ( ・∀・)ノくまくまー" htmlUrl="http://wota.jp/ac/" type="rss" xmlUrl="http://wota.jp/ac/index.rdf" />
+      <outline title="blog.bulkneets.net" htmlUrl="http://blog.bulkneets.net/mt" type="rss" xmlUrl="http://blog.bulkneets.net/mt/feed/" />
+      <outline title="Route 477" htmlUrl="http://route477.net/d/" type="rss" xmlUrl="http://route477.net/d/index.rdf" />
+      <outline title="I like Ruby too." htmlUrl="http://d.hatena.ne.jp/m_seki/" type="rss" xmlUrl="http://d.hatena.ne.jp/m_seki/rss" />
+      <outline title="nothing but trouble" htmlUrl="http://d.hatena.ne.jp/send/" type="rss" xmlUrl="http://d.hatena.ne.jp/send/rss" />
+      <outline title="hogeなlog" htmlUrl="http://d.hatena.ne.jp/hogelog/" type="rss" xmlUrl="http://d.hatena.ne.jp/hogelog/rss" />
+      <outline title="Seeking for my unique color." htmlUrl="http://d.hatena.ne.jp/syou6162/" type="rss" xmlUrl="http://d.hatena.ne.jp/syou6162/rss" />
+      <outline title="@sugamasao.blog.title # =&amp;gt; ”コードで世界を変えたい”" htmlUrl="http://d.hatena.ne.jp/seiunsky/" type="rss" xmlUrl="http://d.hatena.ne.jp/seiunsky/rss" />
+      <outline title="Keep Crazy;shi3zの日記" htmlUrl="http://d.hatena.ne.jp/shi3z/" type="rss" xmlUrl="http://d.hatena.ne.jp/shi3z/rss" />
+      <outline title="はこべにっき#" htmlUrl="http://d.hatena.ne.jp/hakobe932/" type="rss" xmlUrl="http://d.hatena.ne.jp/hakobe932/rss" />
+      <outline title="Discommunicative" htmlUrl="http://d.hatena.ne.jp/todesking/" type="rss" xmlUrl="http://d.hatena.ne.jp/todesking/rss" />
+      <outline title="fubaはてな" htmlUrl="http://d.hatena.ne.jp/fuba/" type="rss" xmlUrl="http://d.hatena.ne.jp/fuba/rss" />
+      <outline title="dara日記" htmlUrl="http://d.hatena.ne.jp/darashi/" type="rss" xmlUrl="http://d.hatena.ne.jp/darashi/rss2" />
+      <outline title="fublog" htmlUrl="http://d.hatena.ne.jp/fublog/" type="rss" xmlUrl="http://d.hatena.ne.jp/fublog/rss" />
+      <outline title="PARAGRAPHS" htmlUrl="http://d.hatena.ne.jp/tily/" type="rss" xmlUrl="http://d.hatena.ne.jp/tily/rss" />
+      <outline title="0xFF" htmlUrl="http://d.hatena.ne.jp/os0x/" type="rss" xmlUrl="http://d.hatena.ne.jp/os0x/rss" />
+      <outline title="Evil Mad Scientist Laboratories" htmlUrl="http://www.evilmadscientist.com" type="rss" xmlUrl="http://www.evilmadscientist.com/backend/geeklog.rss" />
+      <outline title="@masuidrive blog" htmlUrl="http://blog.masuidrive.jp" type="rss" xmlUrl="http://feeds.feedburner.jp/masuidrive" />
+      <outline title="名無しのvim使い" htmlUrl="http://nanasi.jp/" type="rss" xmlUrl="http://nanasi.jp/rss10.rdf" />
+      <outline title="金利0無利息キャッシング – キャッシングできます" htmlUrl="http://subtech.g.hatena.ne.jp/mala/" type="rss" xmlUrl="http://subtech.g.hatena.ne.jp/mala/rss2" />
+      <outline title="aikeの日記" htmlUrl="http://d.hatena.ne.jp/aike/" type="rss" xmlUrl="http://d.hatena.ne.jp/aike/rss2" />
+      <outline title="レジデント初期研修用資料" htmlUrl="http://medt00lz.s59.xrea.com/wp" type="rss" xmlUrl="http://medt00lz.s59.xrea.com/wp/feed" />
+      <outline title="永遠に未完成" htmlUrl="http://d.hatena.ne.jp/thinca/" type="rss" xmlUrl="http://d.hatena.ne.jp/thinca/rss" />
+      <outline title="I am Cruby!" htmlUrl="http://d.hatena.ne.jp/authorNari/" type="rss" xmlUrl="http://d.hatena.ne.jp/authorNari/rss" />
+      <outline title="人生を書き換える者すらいた。" htmlUrl="http://okajima.air-nifty.com/b/" type="rss" xmlUrl="http://okajima.air-nifty.com/b/atom.xml" />
+      <outline title="Close to the EDGE - Home" htmlUrl="http://blog.dio.jp/" type="rss" xmlUrl="http://blog.dio.jp/feed/atom.xml" />
+      <outline title="いぬビーム" htmlUrl="http://d.hatena.ne.jp/kusigahama/" type="rss" xmlUrl="http://d.hatena.ne.jp/kusigahama/rss" />
+      <outline title="”&amp;gt;&amp;lt;xmp&amp;gt;TokuLog 改メ tokuhirom’s blog" htmlUrl="http://d.hatena.ne.jp/tokuhirom/" type="rss" xmlUrl="http://d.hatena.ne.jp/tokuhirom/rss" />
+      <outline title="IT戦記" htmlUrl="http://d.hatena.ne.jp/amachang/" type="rss" xmlUrl="http://d.hatena.ne.jp/amachang/rss" />
+      <outline title="詩による自己救済" htmlUrl="http://d.hatena.ne.jp/oninouta/" type="rss" xmlUrl="http://d.hatena.ne.jp/oninouta/rss" />
+      <outline title="ぼくはまちちゃん！(Hatena)" htmlUrl="http://d.hatena.ne.jp/Hamachiya2/" type="rss" xmlUrl="http://d.hatena.ne.jp/Hamachiya2/rss" />
+      <outline title="今日マチ子のセンネン画報" htmlUrl="http://diary.jp.aol.com/juicyfruits/" type="rss" xmlUrl="http://www.aol.jp/" />
+      <outline title="コトリコ" htmlUrl="http://d.hatena.ne.jp/kotorikotoriko/" type="rss" xmlUrl="http://d.hatena.ne.jp/kotorikotoriko/rss" />
+      <outline title="各自選択、脳内変換と定着で。「waz:sexp」「俺は選ばれた」「情けない、惨め、恥ずかしい」「命乞いに耳を傾ける」「ああ、引かないで、はは」「パラフィンにて無惨」「0.0.0.0は単調に狂乱を振舞う」「線引くという解決方法並び逃避」「幸せだ、何て言うと思ったか！」" htmlUrl="http://d.hatena.ne.jp/wazurai/" type="rss" xmlUrl="http://d.hatena.ne.jp/wazurai/rss" />
+      <outline title="Higepon’s blog - Mona OS and Mosh" htmlUrl="http://d.hatena.ne.jp/higepon/" type="rss" xmlUrl="http://d.hatena.ne.jp/higepon/rss" />
+      <outline title="屋久島沈没" htmlUrl="http://ssig33.com/blog/" type="rss" xmlUrl="http://ssig33.ddo.jp/blog/cl.rdf" />
+      <outline title="最速転職研究会" htmlUrl="http://d.hatena.ne.jp/mala/" type="rss" xmlUrl="http://d.hatena.ne.jp/mala/rss" />
+      <outline title="希望的維管束" htmlUrl="http://d.hatena.ne.jp/wnw/" type="rss" xmlUrl="http://d.hatena.ne.jp/wnw/rss" />
+      <outline title="死滅病棟" htmlUrl="http://itkz.blogspot.com/" type="rss" xmlUrl="http://itkz.blogspot.com/feeds/posts/default?alt=rss" />
+      <outline title="naoyaのはてなダイアリー" htmlUrl="http://d.hatena.ne.jp/naoya/" type="rss" xmlUrl="http://d.hatena.ne.jp/naoya/rss" />
+      <outline title="otsune's SnakeOil" htmlUrl="http://subtech.g.hatena.ne.jp/otsune/" type="rss" xmlUrl="http://subtech.g.hatena.ne.jp/otsune/rss" />
+      <outline title="#生存戦略 、それは" htmlUrl="http://subtech.g.hatena.ne.jp/secondlife/" type="rss" xmlUrl="http://subtech.g.hatena.ne.jp/secondlife/rss" />
+      <outline title="ぼくはまちちゃん！" htmlUrl="http://mxxi.hamachiya.com/" type="rss" xmlUrl="http://mxxi.hamachiya.com/atom.xml" />
+      <outline title="404 Blog Not Found" htmlUrl="http://blog.livedoor.jp/dankogai/" type="rss" xmlUrl="http://blog.livedoor.jp/dankogai/index.rdf" />
+      <outline title="小鳥ピヨピヨ" htmlUrl="http://kotoripiyopiyo.com/" type="rss" xmlUrl="http://coolsummer.typepad.com/kotori/index.rdf" />
+      <outline title="最速インターフェース研究会" htmlUrl="http://la.ma.la/blog/" type="rss" xmlUrl="http://feeds.feedburner.com/mala/blog" />
+      <outline title="IDEA*IDEA" htmlUrl="http://www.ideaxidea.com" type="rss" xmlUrl="http://www.ideaxidea.com/feed" />
+      <outline title="高木浩光＠自宅の日記" htmlUrl="http://takagi-hiromitsu.jp/diary/" type="rss" xmlUrl="http://takagi-hiromitsu.jp/diary/index.rdf" />
+      <outline title="酒とマラの日々" htmlUrl="http://r18.g.hatena.ne.jp/mala/" type="rss" xmlUrl="http://r18.g.hatena.ne.jp/mala/rss" />
+      <outline title="ついったーとHamachiya2" htmlUrl="http://twitter.g.hatena.ne.jp/Hamachiya2/" type="rss" xmlUrl="http://twitter.g.hatena.ne.jp/Hamachiya2/rss" />
+      <outline title="ヽ( ・∀・)ノくまくまー" htmlUrl="http://blog.s21g.com/maiha" type="rss" xmlUrl="http://blog.s21g.com/maiha/articles.rss" />
+      <outline title="あしあと日記" htmlUrl="http://d.hatena.ne.jp/Youchan/" type="rss" xmlUrl="http://d.hatena.ne.jp/Youchan/rss" />
+      <outline title="&amp;lt;s&amp;gt;gnarl,&amp;lt;/s&amp;gt;技術メモ”’&amp;lt;marquee&amp;gt;&amp;lt;textarea&amp;gt;￥" htmlUrl="http://d.hatena.ne.jp/gnarl/" type="rss" xmlUrl="http://d.hatena.ne.jp/gnarl/rss" />
+      <outline title="きしだのはてな" htmlUrl="http://d.hatena.ne.jp/nowokay/" type="rss" xmlUrl="http://d.hatena.ne.jp/nowokay/rss" />
+      <outline title="精神病院精神異常者" htmlUrl="http://d.hatena.ne.jp/SchizoidMan/" type="rss" xmlUrl="http://d.hatena.ne.jp/SchizoidMan/rss2" />
+      <outline title="ゲロと贓物の同一性" htmlUrl="http://todeskin.g.hatena.ne.jp/SchizoidMan/" type="rss" xmlUrl="http://todeskin.g.hatena.ne.jp/SchizoidMan/rss" />
+      <outline title="E_N_I_D" htmlUrl="http://wnw45.blogspot.com/" type="rss" xmlUrl="http://wnw45.blogspot.com/feeds/posts/default" />
+    </outline>
+    <outline title="News">
+      <outline title="MOONGIFT" htmlUrl="http://www.moongift.jp/" type="rss" xmlUrl="http://feeds.feedburner.jp/moongift" />
+      <outline title="reddit.com 日本語版" htmlUrl="http://www.reddit.com/r/ja/" type="rss" xmlUrl="http://www.reddit.com/r/ja/.rss" />
+      <outline title="はてなブックマーク - hibariyan bookmarks - お気に入り" htmlUrl="http://b.hatena.ne.jp/hibariya/favorite" type="rss" xmlUrl="http://b.hatena.ne.jp/hibariya/favorite?mode=rss" />
+      <outline title="Delicious popular" htmlUrl="http://www.delicious.com/popular" type="rss" xmlUrl="http://feeds.delicious.com/v2/rss/popular?count=15" />
+      <outline title="WIRED VISION NEWS" htmlUrl="http://wiredvision.jp/news/" type="rss" xmlUrl="http://rss.rssad.jp/rss/wiredvision/news/atom.xml" />
+      <outline title="スラッシュドット・ジャパン" htmlUrl="http://slashdot.jp/" type="rss" xmlUrl="http://slashdot.jp/slashdotjp.rss" />
+      <outline title="ギズモード・ジャパン" htmlUrl="http://www.gizmodo.jp/" type="rss" xmlUrl="http://www.gizmodo.jp/atom.xml" />
+      <outline title="TechCrunch Japan" htmlUrl="http://jp.techcrunch.com" type="rss" xmlUrl="http://feed.rssad.jp/rss/techcrunch/feed" />
+      <outline title="青空文庫新着情報 Atom 1.0" htmlUrl="http://www.su-ki-da.com/aozora/whatsnew.rdf" type="rss" xmlUrl="http://www.su-ki-da.com/aozora/whatsnew.xml" />
+      <outline title="IT 勉強会カレンダー" htmlUrl="http://www.google.com/calendar/embed?src=fvijvohm91uifvd9hratehf65k@group.calendar.google.com" type="rss" xmlUrl="http://www.google.com/calendar/feeds/fvijvohm91uifvd9hratehf65k@group.calendar.google.com/public/basic" />
+      <outline title="bulknews.typepad.com" htmlUrl="http://bulknews.typepad.com/blog/" type="rss" xmlUrl="http://bulknews.typepad.com/blog/atom.xml" />
+      <outline title="はてなブックマーク - タグ - ruby" htmlUrl="http://b.hatena.ne.jp/t/ruby?sort=eid" type="rss" xmlUrl="http://b.hatena.ne.jp/t/ruby?sort=eid&amp;mode=rss" />
+      <outline title="はてなブックマーク - 人気エントリー" htmlUrl="http://b.hatena.ne.jp/hotentry" type="rss" xmlUrl="http://feeds.feedburner.com/hatena/b/hotentry" />
+    </outline>
+    <outline title="Ruby">
+      <outline title="のどをRubyでいっぱいにして" htmlUrl="http://d.hatena.ne.jp/hibariya/" type="rss" xmlUrl="http://d.hatena.ne.jp/hibariya/rss" />
+      <outline title="RubyKaigi2011 in English" htmlUrl="http://pipes.yahoo.com/pipes/pipe.info?_id=494b7af263b25d814618521c7148107f" type="rss" xmlUrl="http://pipes.yahoo.com/pipes/pipe.run?_id=494b7af263b25d814618521c7148107f&amp;_render=rss" />
+      <outline title="HsbtDiary" htmlUrl="http://www.hsbt.org/diary/" type="rss" xmlUrl="http://www.hsbt.org/diary/index.rdf" />
+      <outline title="卜部昌平のあまりreblogしないtumblr" htmlUrl="http://shyouhei.tumblr.com/" type="rss" xmlUrl="http://shyouhei.tumblr.com/rss" />
+      <outline title="Matzにっき" htmlUrl="http://www.rubyist.net/~matz/" type="rss" xmlUrl="http://www.rubyist.net/~matz/index.rdf" />
+      <outline title="UKSTUDIO" htmlUrl="http://ukstudio.jp" type="rss" xmlUrl="http://ukstudio.jp/feed/" />
+      <outline title="RubyKaigi Nikki" htmlUrl="http://rubykaigi.tdiary.net/" type="rss" xmlUrl="http://rubykaigi.tdiary.net/index.rdf" />
+      <outline title="星一の日記" htmlUrl="http://d.hatena.ne.jp/hajimehoshi/" type="rss" xmlUrl="http://d.hatena.ne.jp/hajimehoshi/rss" />
+      <outline title="世界線航跡蔵" htmlUrl="http://yugui.jp/" type="rss" xmlUrl="http://yugui.jp/articles/recent.atom" />
+      <outline title="ただのにっき" htmlUrl="http://sho.tdiary.net/" type="rss" xmlUrl="http://sho.tdiary.net/index.rdf" />
+      <outline title="moroの日記" htmlUrl="http://d.hatena.ne.jp/moro/" type="rss" xmlUrl="http://d.hatena.ne.jp/moro/rss" />
+      <outline title="qwik.jp/asakusarb" htmlUrl="http://qwik.jp/asakusarb/" type="rss" xmlUrl="http://qwik.jp/asakusarb/rss.xml" />
+      <outline title="角谷HTML化計画" htmlUrl="http://kakutani.com/" type="rss" xmlUrl="http://kakutani.com/index.rdf" />
+      <outline title="Standards" htmlUrl="http://ujihisa.blogspot.com/" type="rss" xmlUrl="http://ujihisa.blogspot.com/feeds/posts/default" />
+      <outline title="思っているよりもずっとずっと人生は短い。" htmlUrl="http://d.hatena.ne.jp/takahashim/" type="rss" xmlUrl="http://d.hatena.ne.jp/takahashim/rss" />
+      <outline title="はてなるせだいあり" htmlUrl="http://d.hatena.ne.jp/nurse/" type="rss" xmlUrl="http://d.hatena.ne.jp/nurse/rss" />
+      <outline title="ursmの日記" htmlUrl="http://d.hatena.ne.jp/ursm/" type="rss" xmlUrl="http://d.hatena.ne.jp/ursm/rss" />
+      <outline title="Rubyちょうたのしい日記" htmlUrl="http://rubyist.g.hatena.ne.jp/kusigahama/" type="rss" xmlUrl="http://rubyist.g.hatena.ne.jp/kusigahama/rss2" />
+      <outline title="あーありがち" htmlUrl="http://aligach.net/diary/" type="rss" xmlUrl="http://aligach.net/diary/index.rdf" />
+      <outline title="System.Exit" htmlUrl="http://jugyo.org/blog" type="rss" xmlUrl="http://feeds.feedburner.com/coople/blog" />
+      <outline title="Rubyist Magazine : 更新日時順" htmlUrl="http://jp.rubyist.net/magazine/?c=recent" type="rss" xmlUrl="http://jp.rubyist.net/magazine/?c=rss" />
+      <outline title="MarkMail: ruby-list order:date-backward" htmlUrl="http://markmail.org/search/?q=ruby-list+order:date-backward" type="rss" xmlUrl="http://markmail.org/atom/ruby-list+order:date-backward" />
+      <outline title="MarkMail: ruby-dev order:date-backward" htmlUrl="http://markmail.org/search/?q=ruby-dev+order:date-backward" type="rss" xmlUrl="http://markmail.org/atom/ruby-dev+order:date-backward" />
+      <outline title="LazyLoadLife" htmlUrl="http://d.hatena.ne.jp/babie/" type="rss" xmlUrl="http://d.hatena.ne.jp/babie/rss" />
+      <outline title="ASCIIcasts - Full Episode Feed" htmlUrl="http://asciicasts.com/" type="rss" xmlUrl="http://asciicasts.com/full.xml" />
+      <outline title="ASCIIcasts - Full Episode Feed" htmlUrl="http://asciicasts.com/" type="rss" xmlUrl="http://ja.asciicasts.com/full.xml" />
+      <outline title="RubyKaigi AdventCalender 2011" htmlUrl="http://rubykaigi.org/2011/ja/advent_calendar" type="rss" xmlUrl="http://rubykaigi.org/2011/ja/advent_calendar.rss" />
+    </outline>
+    <outline title="livedoor">
+    </outline>
+    <outline title="お知らせ">
+    </outline>
+    <outline title="ニュース">
+    </outline>
+    <outline title="受信箱">
+    </outline>
+</outline>
+</body></opml>
