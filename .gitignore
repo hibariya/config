@@ -4,3 +4,4 @@ _ssh/config
 tmp/*
 _screen/.termcap
 _cline/cline.sqlite3
+_cline/log
