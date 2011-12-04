@@ -1,6 +1,6 @@
 # This is for "stem" screen, which recursively invokes screen
 source defaults
 
-caption always "%{=r kr}[%Y/%m/%d %c:%s %A] %{=r kb} %h"
+caption always "%{=r kr}[%Y/%m/%d %c:%s %A] %{=r kc} %h"
 
 screen screen -S leaf -qUmc .screen/leaf

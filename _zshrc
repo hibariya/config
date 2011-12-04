@@ -1,7 +1,7 @@
 # rbenv
 function complete() {} # workaround
 export CONFIGURE_OPTS="--with-readline-dir=/usr/local --with-iconv-dir=/usr/local"
-export PATH=$HOME/.rbenv/bin:$PATH
+export PATH=/Users/hibariya/local/bin:$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 source ~/.rbenv/completions/rbenv.zsh
 
@@ -17,8 +17,8 @@ zstyle ':vcs_info:*' actionformats '[%s: %b] (%a)'
 
 if is-at-least 4.3.10; then
   zstyle ':vcs_info:git:*' check-for-changes true
-  zstyle ':vcs_info:git:*' stagedstr "(+_+)"
-  zstyle ':vcs_info:git:*' unstagedstr "(-_-)"
+  zstyle ':vcs_info:git:*' stagedstr " =)"
+  zstyle ':vcs_info:git:*' unstagedstr " =|"
   zstyle ':vcs_info:git:*' formats '[%s: %b%c%u]'
   zstyle ':vcs_info:git:*' actionformats '[%s: %b%c%u] (%a)'
 fi
@@ -82,13 +82,14 @@ alias be='bundle exec'
 alias bu='bundle update'
 alias g='git'
 alias reload='source ~/.zshrc'
+source ~/.zshenv
 source ~/.zsh/*
 
 function v() { vim `echo $* | gsed -e "s/:\([0-9]\+\)/ +\1/"` }
 function preexec(){ echo -ne "\ek${(z)2}\e\\" }
 function set_rprompt(){
   # 重い...
-  RPROMPT="%F{green}[%~] %1(v|%F{blue}%1v%f|) %F{red}[ruby: `rbenv version | sed -e 's/ .*//'`]%f"
+  RPROMPT="%F{cyan}[%~] %1(v|%F{cyan}%1v%f|) %F{red}[ruby: `rbenv version | sed -e 's/ .*//'`]%f"
 }
 
 if [ $SHLVL = 1 ]; then

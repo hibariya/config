@@ -4,6 +4,6 @@
 source defaults
 
 caption always "%0`%=%1`"
-backtick 0 10 10 .screen/syslog.rb 2
+backtick 0 0 0 cline tick 2 15
 
 screen screen -S stem3 -qUmc .screen/stem3

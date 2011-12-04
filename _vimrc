@@ -22,6 +22,7 @@ Bundle 'git://github.com/kana/vim-surround.git'
 
 Bundle 'git://github.com/vim-ruby/vim-ruby.git'
 Bundle 'git://github.com/motemen/git-vim.git'
+Bundle 'git://github.com/tpope/vim-fugitive.git'
 Bundle 'git://github.com/Shougo/neocomplcache.git'
 Bundle 'git://github.com/h1mesuke/vim-alignta.git'
 
@@ -30,10 +31,13 @@ Bundle 'git://github.com/ujihisa/unite-colorscheme.git'
 Bundle 'git://github.com/h1mesuke/unite-outline.git'
 Bundle 'git://github.com/ujihisa/unite-font.git'
 Bundle 'https://github.com/ujihisa/unite-locate.git'
-
 Bundle 'git://github.com/tsukkee/unite-help.git'
+
+"Bundle 'git://github.com/Shougo/vimproc.git'
+"Bundle 'git://github.com/Shougo/vimshell.git'
+
 Bundle 'matchit.zip'
-Bundle 'git://github.com/motemen/hatena-vim.git'
+"Bundle 'git://github.com/motemen/hatena-vim.git'
 Bundle 'cucumber.zip'
 Bundle 'git://github.com/kchmck/vim-coffee-script.git'
 Bundle 'Command-T'
@@ -178,7 +182,7 @@ highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
 
 " for Hatena.vim
-:let g:hatena_user='hibariya'
+":let g:hatena_user='hibariya'
 
 " Align.vim
 :let g:Align_xstrlen = 3
@@ -190,3 +194,6 @@ let g:yankring_zap_keys = 'horrible!'
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+
+" crontab error workaround
+set backupskip=/tmp/*,/private/tmp/*"

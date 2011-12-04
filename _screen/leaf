@@ -26,7 +26,7 @@ msgwait 3
 msgminwait 2
 
 caption always "%?%F%{=r ..}%?%-Lw%40L>%?%F%{=b dR}%?%n%f* %t%?%F%{-}%?%+Lw"
-sorendition "+rb kw"
+sorendition "+rb kc"
 
 defscrollback 8192
 
