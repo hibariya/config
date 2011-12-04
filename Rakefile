@@ -14,15 +14,16 @@ namespace :rcfiles do
         dest = HOME.join(file.basename.sub(/^_/, '.'))
 
         if File.directory? dest
-          tmp_file = Pathname.new('tmp').join(dest.basename)
+          tmp_file = Pathname.new('tmp').realpath.join(dest.basename)
+
+          puts "backup: #{dest} -> #{tmp_file}"
           FileUtils.mv dest, tmp_file
-          puts "backup: #{dest} -> #{tmp_file.realpath}"
         end
 
-        FileUtils.ln_s src, dest, :force => true
         puts "symlink: #{file} -> #{dest}"
-      rescue
-        warn [$!.class, $!.message].join("\n")
+        FileUtils.ln_s src, dest, :force => true
+      #rescue
+      #  warn [$!.class, $!.message].join("\n")
       end
     end
   end
