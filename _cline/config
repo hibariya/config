@@ -1,17 +1,10 @@
 # coding: utf-8
 
-Cline.pool_size = 2000
-Cline.out_stream = Cline::OutStreams::WithGrowl.new($stdout)
-Cline.collectors << Cline::Collectors::Feed
-Cline.collectors << Cline::Collectors::Github
+Cline.configure do |config|
+  config.pool_size = 2000
+  config.out_stream = Cline::OutStreams::WithGrowl.new($stdout)
+  config.append_collector Cline::Collectors::Feed
+  config.append_collector Cline::Collectors::Github
 
-Cline::Collectors::Github.login_name = 'hibariya'
-
-#Cline.configure do
-#  pool_size 2000
-#  out_stream Cline::OutStreams::WithGrowl.new($stdout)
-#  append_collector Cline::Collectors::Feed
-#  append_collector Cline::Collectors::Github
-#
-#  Cline::Collectors::Github.login_name = 'hibariya'
-#end
+  Cline::Collectors::Github.login_name = 'hibariya'
+end
