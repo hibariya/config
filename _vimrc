@@ -1,7 +1,6 @@
 set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
-Bundle 'opsplorer'
 Bundle 'endwise.vim'
 Bundle 'haml.zip'
 Bundle 'git-commit'
@@ -13,35 +12,25 @@ Bundle 'mrkn256.vim'
 Bundle 'quickrun.vim'
 Bundle 'vimwiki'
 Bundle 'open-browser.vim'
-"Bundle 'git://github.com/t9md/vim-textmanip.git' "動かぬ
 Bundle 'git://github.com/tpope/vim-markdown.git'
 Bundle 'neco-look'
-
 "Bundle 'surround.vim' "vim-reviewのためにvim-surroundを使う
 Bundle 'git://github.com/kana/vim-surround.git'
-
 Bundle 'git://github.com/vim-ruby/vim-ruby.git'
 Bundle 'git://github.com/motemen/git-vim.git'
 Bundle 'git://github.com/tpope/vim-fugitive.git'
 Bundle 'git://github.com/Shougo/neocomplcache.git'
 Bundle 'git://github.com/h1mesuke/vim-alignta.git'
-
 Bundle 'git://github.com/Shougo/unite.vim.git'
 Bundle 'git://github.com/ujihisa/unite-colorscheme.git'
 Bundle 'git://github.com/h1mesuke/unite-outline.git'
 Bundle 'git://github.com/ujihisa/unite-font.git'
 Bundle 'https://github.com/ujihisa/unite-locate.git'
 Bundle 'git://github.com/tsukkee/unite-help.git'
-
-"Bundle 'git://github.com/Shougo/vimproc.git'
-"Bundle 'git://github.com/Shougo/vimshell.git'
-
 Bundle 'matchit.zip'
-"Bundle 'git://github.com/motemen/hatena-vim.git'
 Bundle 'cucumber.zip'
 Bundle 'git://github.com/kchmck/vim-coffee-script.git'
 Bundle 'Command-T'
-
 Bundle 'git://github.com/moro/vim-review.git'
 
 filetype on
@@ -63,7 +52,6 @@ set showmatch
 set ttymouse=xterm2
 set wildmode=longest:list
 set nocompatible
-
 set directory-=.
 
 "backup
@@ -124,14 +112,12 @@ highlight CursorLine gui=underline
 
 " keybinds
 nnoremap ; :
-nnoremap <unique> <silent> tab :tabnew<CR>
-nnoremap <unique> <silent> tn :tabnext<CR>
-nnoremap <unique> <silent> tp :tabprevious<CR>
-nnoremap <unique> <silent> tf :tabfirst<CR>
-nnoremap <unique> <silent> tl :tablast<CR>
-nnoremap <unique> <silent> fi :Opsplore<CR>
-nnoremap <unique> <silent> ya :YRShow<CR>
+nnoremap <unique> <silent> Tab :tabnew<CR>
+nnoremap <unique> <silent> Tn :tabnext<CR>
+nnoremap <unique> <silent> Tp :tabprevious<CR>
+nnoremap <unique> <silent> Ya :YRShow<CR>
 nnoremap <unique> <silent> <space>tm :tabm<space>
+nnoremap <unique> <silent> <space>u<space> :Unite<space>
 nnoremap <unique> <silent> <space>ub :Unite buffer<CR>
 nnoremap <unique> <silent> <space>uf :Unite file<CR>
 nnoremap <unique> <silent> <space>um :Unite file_mru<CR>
@@ -141,7 +127,6 @@ nnoremap <unique> <silent> <space>ul :Unite locate<CR>
 nnoremap <unique> <silent> <space>uc :Unite colorscheme<CR>
 nnoremap <unique> <silent> <space>ui :Unite buffer tab window register file_mru directory_mru file bookmark<CR>
 nnoremap <unique> <silent> <space>xx :qa<CR>
-nnoremap <unique> <silent> <space>qq :q<CR>
 
 " Autocompletion + <TAB>で補完
 function! InsertTabWrapper()
@@ -180,9 +165,6 @@ setlocal omnifunc=syntaxcomplete#Complete
 
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
-
-" for Hatena.vim
-":let g:hatena_user='hibariya'
 
 " Align.vim
 :let g:Align_xstrlen = 3
