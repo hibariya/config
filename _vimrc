@@ -114,7 +114,9 @@ highlight CursorLine gui=underline
 nnoremap ; :
 nnoremap <unique> <silent> Tab :tabnew<CR>
 nnoremap <unique> <silent> Tn :tabnext<CR>
+nnoremap <unique> <silent> TN :tabnext<CR>
 nnoremap <unique> <silent> Tp :tabprevious<CR>
+nnoremap <unique> <silent> TP :tabprevious<CR>
 nnoremap <unique> <silent> Ya :YRShow<CR>
 nnoremap <unique> <silent> <space>tm :tabm<space>
 nnoremap <unique> <silent> <space>u<space> :Unite<space>
