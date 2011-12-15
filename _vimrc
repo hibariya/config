@@ -118,6 +118,7 @@ nnoremap <unique> <silent> TN :tabnext<CR>
 nnoremap <unique> <silent> Tp :tabprevious<CR>
 nnoremap <unique> <silent> TP :tabprevious<CR>
 nnoremap <unique> <silent> Ya :YRShow<CR>
+nnoremap <unique> <silent> <space>ta :tabnew<CR>
 nnoremap <unique> <silent> <space>tm :tabm<space>
 nnoremap <unique> <silent> <space>u<space> :Unite<space>
 nnoremap <unique> <silent> <space>ub :Unite buffer<CR>
@@ -129,6 +130,7 @@ nnoremap <unique> <silent> <space>ul :Unite locate<CR>
 nnoremap <unique> <silent> <space>uc :Unite colorscheme<CR>
 nnoremap <unique> <silent> <space>ui :Unite buffer tab window register file_mru directory_mru file bookmark<CR>
 nnoremap <unique> <silent> <space>xx :qa<CR>
+nnoremap <unique> <silent> <space>fi :Unite file<CR>
 
 " Autocompletion + <TAB>で補完
 function! InsertTabWrapper()
