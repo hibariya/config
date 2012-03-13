@@ -32,6 +32,8 @@ Bundle 'cucumber.zip'
 Bundle 'git://github.com/kchmck/vim-coffee-script.git'
 Bundle 'Command-T'
 Bundle 'git://github.com/moro/vim-review.git'
+Bundle 'VimClojure'
+Bundle 'Rename'
 
 filetype on
 filetype indent on
@@ -131,6 +133,8 @@ nnoremap <unique> <silent> <space>uc :Unite colorscheme<CR>
 nnoremap <unique> <silent> <space>ui :Unite buffer tab window register file_mru directory_mru file bookmark<CR>
 nnoremap <unique> <silent> <space>xx :qa<CR>
 nnoremap <unique> <silent> <space>fi :Unite file<CR>
+
+cnoremap <C-x> <C-r>=expand('%:p:h')<CR>/
 
 " Autocompletion + <TAB>で補完
 function! InsertTabWrapper()

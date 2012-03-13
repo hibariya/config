@@ -13,6 +13,7 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 export LISTMAX=0
 
 export ARCHFLAGS="-arch x86_64"
+export MAKEOPTS="-j5"
 
 export PGDATA=/usr/local/var/postgres
 

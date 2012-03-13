@@ -3,5 +3,4 @@ _ssh/known_hosts
 _ssh/config
 tmp/*
 _screen/.termcap
-_cline/*.sqlite3
-_cline/log
+_cline

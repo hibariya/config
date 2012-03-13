@@ -13,14 +13,14 @@ autoload -Uz vcs_info
 autoload -Uz is-at-least
 
 zstyle ':vcs_info:*' formats '[%s: %b]'
-zstyle ':vcs_info:*' actionformats '[%s: %b] (%a)'
+zstyle ':vcs_info:*' actionformats '[%s: %b (%a)]'
 
 if is-at-least 4.3.10; then
   zstyle ':vcs_info:git:*' check-for-changes true
-  zstyle ':vcs_info:git:*' stagedstr " =)"
-  zstyle ':vcs_info:git:*' unstagedstr " =|"
+  zstyle ':vcs_info:git:*' stagedstr " (staged)"
+  zstyle ':vcs_info:git:*' unstagedstr " (unstaged)"
   zstyle ':vcs_info:git:*' formats '[%s: %b%c%u]'
-  zstyle ':vcs_info:git:*' actionformats '[%s: %b%c%u] (%a)'
+  zstyle ':vcs_info:git:*' actionformats '[%s: %b%c%u (%a)]'
 fi
 
 precmd () {
