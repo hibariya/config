@@ -10,7 +10,6 @@ Bundle 'newspaper.vim'
 Bundle 'xoria256.vim'
 Bundle 'mrkn256.vim'
 Bundle 'quickrun.vim'
-Bundle 'vimwiki'
 Bundle 'open-browser.vim'
 Bundle 'git://github.com/tpope/vim-markdown.git'
 Bundle 'neco-look'
@@ -27,6 +26,7 @@ Bundle 'git://github.com/h1mesuke/unite-outline.git'
 Bundle 'git://github.com/ujihisa/unite-font.git'
 Bundle 'https://github.com/ujihisa/unite-locate.git'
 Bundle 'git://github.com/tsukkee/unite-help.git'
+Bundle 'git://github.com/tsukkee/unite-tag.git'
 Bundle 'matchit.zip'
 Bundle 'cucumber.zip'
 Bundle 'git://github.com/kchmck/vim-coffee-script.git'
@@ -135,6 +135,11 @@ nnoremap <unique> <silent> <space>xx :qa<CR>
 nnoremap <unique> <silent> <space>fi :Unite file<CR>
 
 cnoremap <C-x> <C-r>=expand('%:p:h')<CR>/
+
+au FileType unite nnoremap <silent> <buffer> <expr> <C-o> unite#do_action('split')
+au FileType unite inoremap <silent> <buffer> <expr> <C-o> unite#do_action('split')
+au FileType unite nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
+au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
 
 " Autocompletion + <TAB>で補完
 function! InsertTabWrapper()
