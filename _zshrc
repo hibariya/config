@@ -1,6 +1,6 @@
 # rbenv
 function complete() {} # workaround
-export CONFIGURE_OPTS="--with-readline-dir=/usr/local --with-iconv-dir=/usr/local"
+export CONFIGURE_OPTS="--with-opt-dir=/usr/local"
 export PATH=/Users/hibariya/local/bin:$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 source ~/.rbenv/completions/rbenv.zsh
@@ -72,7 +72,7 @@ PROMPT="%n@ ;-) "
 
 alias h='history -E -32'
 alias ll='ls -laFG'
-alias l='ls -laFG'
+alias l='ll'
 alias tailf="tail -f"
 alias -g L=" | less "
 alias -g V=" | vim -R - "
@@ -80,6 +80,7 @@ alias info='info --vi-keys'
 alias bo='bundle open'
 alias be='bundle exec'
 alias bu='bundle update'
+alias co='cline open'
 alias g='git'
 alias reload='source ~/.zshrc'
 source ~/.zshenv
