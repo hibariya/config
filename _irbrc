@@ -1,5 +1,4 @@
 begin
-  #Readline.vi_editing_mode
   Readline.emacs_editing_mode
 
   require 'rubygems'
@@ -8,6 +7,5 @@ begin
   Wirble.init
   Wirble.colorize
 rescue Exception
-  puts $!.class
-  puts $!.message
+  puts %([irbrc] #{$!.class} #{$!.message})
 end
