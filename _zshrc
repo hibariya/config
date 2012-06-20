@@ -70,6 +70,7 @@ bindkey -a 'q' push-line
 SPROMPT="%r is correct? [n,y,a,e]: "
 PROMPT="%n@ ;-) "
 
+alias emoji='open http://www.emoji-cheat-sheet.com/'
 alias h='history -E -32'
 alias ll='ls -laFG'
 alias l='ll'
