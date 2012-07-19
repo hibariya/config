@@ -6,9 +6,6 @@ Bundle 'haml.zip'
 Bundle 'git-commit'
 Bundle 'rails.vim'
 Bundle 'YankRing.vim'
-Bundle 'newspaper.vim'
-Bundle 'xoria256.vim'
-Bundle 'mrkn256.vim'
 Bundle 'quickrun.vim'
 Bundle 'open-browser.vim'
 Bundle 'git://github.com/tpope/vim-markdown.git'
@@ -35,6 +32,17 @@ Bundle 'git://github.com/moro/vim-review.git'
 Bundle 'VimClojure'
 Bundle 'Rename'
 
+" colorschemes
+Bundle 'vim_colors'
+Bundle 'pyte'
+Bundle 'DarkZen-Color-Scheme'
+Bundle 'molokai'
+Bundle 'Wombat'
+Bundle 'Zenburn'
+Bundle 'mrkn256.vim'
+Bundle 'xoria256.vim'
+Bundle 'newspaper.vim'
+
 filetype on
 filetype indent on
 filetype plugin on
@@ -42,9 +50,7 @@ syntax on
 
 set t_Co=256
 set background=dark
-colorscheme desert
-"let g:colors_name = "xoria256"
-"let g:colors_name = "newspaper"
+colorscheme wombat
 
 set ambiwidth=double
 set autoread
