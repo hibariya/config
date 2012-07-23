@@ -1,11 +1,15 @@
-begin
-  Readline.emacs_editing_mode
-
-  require 'rubygems'
-  require 'wirble'
-
-  Wirble.init
-  Wirble.colorize
-rescue Exception
-  puts %([irbrc] #{$!.class} #{$!.message})
+[
+  -> { Readline.emacs_editing_mode },
+  -> { require 'rubygems' },
+  -> { require 'ruremai' },
+  -> { require 'wirble'
+    Wirble.init
+    Wirble.colorize
+  }
+].each do |proc|
+  begin
+    proc.call
+  rescue Exception
+    puts %([irbrc] #{$!.class} #{$!.message})
+  end
 end
