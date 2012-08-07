@@ -1,7 +1,7 @@
 # rbenv
 function complete() {} # workaround
 export CONFIGURE_OPTS="--with-opt-dir=/usr/local"
-export PATH=/Users/hibariya/local/bin:$HOME/.rbenv/bin:$PATH
+export PATH=/Users/hibariya/local/bin:$HOME/.rbenv/bin:$HOME/bin:$PATH
 eval "$(rbenv init -)"
 source ~/.rbenv/completions/rbenv.zsh
 
