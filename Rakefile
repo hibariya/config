@@ -1,3 +1,4 @@
+# XXX 書き直したいね
 require 'pathname'
 require 'fileutils'
 
