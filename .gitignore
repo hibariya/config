@@ -1,4 +1,4 @@
-_ssh/id_rsa*
+_ssh/*_rsa*
 _ssh/known_hosts
 _ssh/config
 tmp/*
