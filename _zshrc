@@ -84,19 +84,34 @@ alias bu='bundle update'
 alias co='cline open'
 alias g='git'
 alias reload='source ~/.zshrc'
+alias tmux='tmux -2'
 source ~/.zshenv
 source ~/.zsh/*
 
 function v() { vim `echo $* | gsed -e "s/:\([0-9]\+\)/ +\1/"` }
 function preexec(){ echo -ne "\ek${(z)2}\e\\" }
 function set_rprompt(){
-  # 重い...
+  # XXX 重い...
   RPROMPT="%F{cyan}[%~] %1(v|%F{cyan}%1v%f|) %F{red}[ruby: `rbenv version | sed -e 's/ .*//'`]%f"
 }
 
-if [ $SHLVL = 1 ]; then
-  export SCREENDIR=~/.screen/
-  screen
+# tmux
+if ! [[ $TMUX_LEAF_LOADED = true ]]; then
+  if ! [[ $TMUX_STEM_LOADED = true ]]; then
+    TMUX_STEM_LOADED=true TMUX= tmux -L stem -f ~/.tmux/stem.conf
+  else
+    if [[ $TMUX_PANE = "%0" ]]; then
+      tmux split-window
+      tmux resize-pane -D 100
+      tmux resize-pane -U 2
+      tmux select-pane -U
+      TMUX_LEAF_LOADED=true TMUX= tmux -L leaf -f ~/.tmux/leaf.conf
+    fi
+
+    if [[ $TMUX_PANE = "%1" ]]; then
+      cline tick 1 5
+    fi
+  fi
 fi
 
 set_rprompt
