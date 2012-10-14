@@ -13,6 +13,7 @@
   unwip = "!sh -c 'git log -n 1 | grep -q -c wip && git reset HEAD~1'"
 [core]
   editor = vim
+	excludesfile = /Users/hibariya/.gitignore
 [color]
   ui = true
 

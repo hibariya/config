@@ -20,7 +20,8 @@ bind "L" focus "right"
 bind k eval 'exec cat' kill redisplay
 
 # Misc. settings
-shell "/usr/local/bin/zsh"
+#shell "/usr/local/bin/zsh"
+shell "zsh"
 markkeys "h=^B:l=^F:$=^E:^U=^Z:^D=^V"
 msgwait 3
 msgminwait 2

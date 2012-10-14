@@ -1,11 +1,7 @@
 [
   -> { Readline.emacs_editing_mode },
   -> { require 'rubygems' },
-  -> { require 'ruremai' },
-  -> { require 'wirble'
-    Wirble.init
-    Wirble.colorize
-  }
+  -> { require 'ruremai' }
 ].each do |proc|
   begin
     proc.call

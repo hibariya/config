@@ -42,6 +42,11 @@ Bundle 'Zenburn'
 Bundle 'mrkn256.vim'
 Bundle 'xoria256.vim'
 Bundle 'newspaper.vim'
+Bundle 'git://github.com/Lokaltog/vim-distinguished.git'
+Bundle 'git://github.com/nanotech/jellybeans.vim.git'
+Bundle 'twilight'
+Bundle 'git://github.com/tpope/vim-vividchalk.git'
+Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 
 filetype on
 filetype indent on
@@ -50,7 +55,7 @@ syntax on
 
 set t_Co=256
 set background=dark
-colorscheme wombat
+colorscheme vividchalk
 
 set ambiwidth=double
 set autoread
