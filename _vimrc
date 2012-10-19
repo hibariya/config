@@ -1,4 +1,4 @@
-set rtp+=~/.vim/vundle.git/
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'endwise.vim'
@@ -192,9 +192,6 @@ match WhitespaceEOL /\s\+$/
 
 " Align.vim
 :let g:Align_xstrlen = 3
-
-" YankRing.vim
-let g:yankring_zap_keys = 'horrible!'
 
 " open-browser.vim
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
