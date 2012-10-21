@@ -1,37 +1,35 @@
 require 'pathname'
 
-home = Pathname.new(ENV['HOME'])
+home = Pathname.new(ENV['DEST'] || ENV['HOME']).expand_path
 repo = Pathname.new(__FILE__).expand_path.dirname
 
-cd repo
+Dir.chdir repo
 
 task :screen do
-  mkdir_p home.join('.screen')
+  mkdir_p screen_dir = home.join('.screen')
+  chmod   0700, screen_dir
 
-  cp_r %w(_screen/defaults _screen/leaf _screen/stem1 _screen/stem2 _screen/stem3 _screen/stem4), home.join('.screen/')
-  cp   '_screenrc', home.join('.screenrc')
+  install Dir['_screen/*'], home.join('.screen/')
+  install '_screenrc',      home.join('.screenrc')
 end
 
 task :ssh do
-  ssh_dir = home.join('.ssh')
-  mkdir_p ssh_dir
+  mkdir_p ssh_dir = home.join('.ssh')
   chmod   0700, ssh_dir
 
-  cp '_ssh/config', home.join('.ssh/')
+  install Dir['_ssh/*'], home.join('.ssh/')
 end
 
 task :zsh do
-  cp '_zshrc', home.join('.zshrc')
+  install '_zshrc', home.join('.zshrc')
 
   unless (zshenv = home.join('.zshenv')).file?
-    cp '_zshenv', zshenv
+    install '_zshenv', zshenv
   end
 
   mkdir_p home.join('.zsh/')
 
-  unless home.join('.zsh/oh-my-zsh').exist?
-    cp '_zsh/oh-my-zsh', home.join('.zsh/')
-  end
+  install Dir['_zsh/*'], home.join('.zsh/')
 
   Rake::Task[:omz].invoke unless home.join('.oh-my-zsh').directory?
 end
@@ -40,12 +38,15 @@ task :omz do
   sh %(git clone git://github.com/robbyrussell/oh-my-zsh.git #{home}/.oh-my-zsh)
 end
 
-task :vim do
-  cp '_vimrc', home.join('.vimrc')
+task :git do
+  install '_gitconfig', home.join('.gitconfig')
+end
 
-  unless home.join('.vim/bundle').directory?
-    Rake::Task[:vundle].invoke
-  end
+task :vim do
+  install '_vimrc',  home.join('.vimrc')
+  install '_gvimrc', home.join('.gvimrc')
+
+  Rake::Task[:vundle].invoke unless home.join('.vim/bundle').directory?
 end
 
 task :vundle do
@@ -56,11 +57,9 @@ task :vundle do
 end
 
 task :ruby do
-  cp '_irbrc', home.join('.irbrc')
+  install '_irbrc', home.join('.irbrc')
 
-  unless home.join('.rbenv').directory?
-    Rake::Task[:rbenv].invoke
-  end
+  Rake::Task[:rbenv].invoke unless home.join('.rbenv').directory?
 end
 
 task :rbenv do
@@ -70,12 +69,11 @@ task :rbenv do
 
   ruby_build_dir = home.join('.rbenv/plugins/ruby-build')
   sh %(git clone git://github.com/sstephenson/ruby-build.git #{ruby_build_dir})
-  sh %(PREFIX=#{home}/.rbenv #{ruby_build_dir}/install.sh)
+  sh %(cd #{ruby_build_dir}; PREFIX=#{home}/.rbenv #{ruby_build_dir}/install.sh)
 
-  ruby_version = ENV['RUBY_VERSION'] || '1.9.2-p286'
-
-  sh %(reload; ruby-build #{ruby_version} #{home.join('.rbenv/versions')}/#{ruby_version})
+  ruby_version = ENV['RUBY_VERSION'] || '1.9.3-p286'
+  sh %(hash -r; ruby-build #{ruby_version} #{home.join('.rbenv/versions')}/#{ruby_version})
 end
 
 task default: :install
-task install: %w(screen ssh zsh vim ruby)
+task install: %w(screen ssh zsh git vim ruby)
