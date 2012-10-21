@@ -3,4 +3,3 @@ _ssh/known_hosts
 _ssh/config
 tmp/*
 _screen/.termcap
-_cline

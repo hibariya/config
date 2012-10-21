@@ -73,7 +73,14 @@ task :rbenv do
 
   ruby_version = ENV['RUBY_VERSION'] || '1.9.3-p286'
   sh %(hash -r; ruby-build #{ruby_version} #{home.join('.rbenv/versions')}/#{ruby_version})
+  sh %(rbenv global #{ruby_version})
+end
+
+task :cline do
+  mkdir_p home.join('.cline')
+
+  install '_cline/config', home.join('.cline/')
 end
 
 task default: :install
-task install: %w(screen ssh zsh git vim ruby)
+task install: %w(screen ssh zsh git vim ruby cline)
