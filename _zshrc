@@ -3,9 +3,7 @@ plugins=(screen git rbenv ruby gem rails3 heroku)
 source ~/.zsh/oh-my-zsh
 
 # rbenv
-#function complete() {} # workaround
-export CONFIGURE_OPTS="--with-opt-dir=/usr/local"
-export PATH=/Users/hibariya/local/bin:$HOME/.rbenv/bin:$HOME/bin:$PATH
+export PATH=$HOME/.rbenv/bin:$HOME/bin:$PATH
 eval "$(rbenv init -)"
 source ~/.rbenv/completions/rbenv.zsh
 
