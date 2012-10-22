@@ -40,6 +40,7 @@ end
 
 task :git do
   install '_gitconfig', home.join('.gitconfig')
+  install '_gitignore', home.join('.gitignore')
 end
 
 task :vim do
