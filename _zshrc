@@ -10,67 +10,9 @@ source ~/.rbenv/completions/rbenv.zsh
 autoload -U compinit
 compinit
 
-# show branch
-autoload -Uz vcs_info
-autoload -Uz is-at-least
-
-zstyle ':vcs_info:*' formats '[%s: %b]'
-zstyle ':vcs_info:*' actionformats '[%s: %b (%a)]'
-
-if is-at-least 4.3.10; then
-  zstyle ':vcs_info:git:*' check-for-changes true
-  zstyle ':vcs_info:git:*' stagedstr " (staged)"
-  zstyle ':vcs_info:git:*' unstagedstr " (unstaged)"
-  zstyle ':vcs_info:git:*' formats '[%s: %b%c%u]'
-  zstyle ':vcs_info:git:*' actionformats '[%s: %b%c%u (%a)]'
-fi
-
-precmd () {
-  psvar=()
-  vcs_info
-  [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
-  set_rprompt
-}
-
-zstyle ':completion:*' verbose yes
-zstyle ':completion:*:descriptions' format '%B%d%b'
-zstyle ':completion:*:messages' format '%d'
-zstyle ':completion:*:warnings' format 'No matches for: %d'
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
-zstyle ':completion:*:default' list-colors ${LS_COLORS}
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([%0-9]#)*=0=01;31'
-
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
-setopt hist_ignore_all_dups
-setopt hist_ignore_dups
-setopt share_history
-setopt append_history
-setopt inc_append_history
-setopt hist_no_store
-setopt hist_reduce_blanks
-setopt auto_cd
-setopt auto_menu
-setopt list_packed
-setopt list_types
-setopt magic_equal_subst
-setopt print_eight_bit
-setopt auto_pushd
-unsetopt CORRECT_ALL
-
-bindkey -e
-bindkey "^R" history-incremental-search-backward
-bindkey "^S" history-incremental-search-forward
-#bindkey "^p" up-line-or-history
-bindkey '^P' history-beginning-search-backward
-bindkey '^N' history-beginning-search-forward
-bindkey -a 'q' push-line
-
-SPROMPT="%r is correct? [n,y,a,e]: "
-PROMPT="%n@ ;-) "
 
 alias emoji='open http://www.emoji-cheat-sheet.com/'
 alias h='history -E -32'
@@ -86,19 +28,11 @@ alias co='cline open'
 alias g='git'
 alias reload='source ~/.zshrc'
 
+function v() { vim `echo $* | gsed -e "s/:\([0-9]\+\)/ +\1/"` }
+function omz_termsupport_precmd(){ echo -ne "\ek${(z)2}\e\\" }
 function eng {
  grep --regexp='[^A-Za-z0-9]'$1 ~/data/eijiro.utf8.txt | sed -e "s/"$1"/\\x1b[32m\\x1b[1m"$1"\\x1b[0m/g" | less
 }
-
-function v() { vim `echo $* | gsed -e "s/:\([0-9]\+\)/ +\1/"` }
-function set_rprompt(){
-  # XXX 重い...
-  RPROMPT="%F{cyan}[%~] %1(v|%F{cyan}%1v%f|) %F{red}[ruby: `rbenv version | sed -e 's/ .*//'`]%f"
-}
-
-function omz_termsupport_precmd(){ echo -ne "\ek${(z)2}\e\\" }
-
-set_rprompt
 
 source ~/.zshenv
 
