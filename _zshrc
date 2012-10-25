@@ -10,6 +10,8 @@ source ~/.rbenv/completions/rbenv.zsh
 autoload -U compinit
 compinit
 
+unsetopt CORRECT_ALL
+
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
