@@ -11,7 +11,7 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="miloshadzic"
 #ZSH_THEME="nanotech"
 #ZSH_THEME="philips"
-ZSH_THEME="tjkirch"
+#ZSH_THEME="tjkirch"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -40,3 +40,21 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+## Customized Theme
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}[ ±"
+ZSH_THEME_GIT_PROMPT_SUFFIX=" ]%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✎"
+
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+
+function prompt_char {
+	if [ $UID -eq 0 ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo "%{$fg[yellow]%}✿%{$reset_color%}"; fi
+}
+
+PROMPT='%{$fg[cyan]%}%n%{$reset_color%}%{$fg[cyan]%}@%m%{$reset_color%}%{$fg_bold[cyan]%}:%~%{$reset_color%} %{$fg[red]%}[ %* ]%{$reset_color%} %(?,%{$fg[cyan]%}[ ☀ $? ]%{$reset_color%},%{$fg[red]%}[ ☂ $? ]%{$reset_color%}) $(git_prompt_info)
+%{$fg[cyan]%}⧉ $SHLVL %{$reset_color%}$(prompt_char) '
+#%_$(prompt_char) '
+
+RPROMPT=''
