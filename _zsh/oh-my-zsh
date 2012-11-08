@@ -43,8 +43,8 @@ source $ZSH/oh-my-zsh.sh
 
 ## Customized Theme
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}[ ±"
-ZSH_THEME_GIT_PROMPT_SUFFIX=" ]%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="\b"
+ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✎"
 
 ZSH_THEME_GIT_PROMPT_CLEAN=""
@@ -53,8 +53,9 @@ function prompt_char {
 	if [ $UID -eq 0 ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo "%{$fg[yellow]%}✿%{$reset_color%}"; fi
 }
 
-PROMPT='%{$fg[cyan]%}%n%{$reset_color%}%{$fg[cyan]%}@%m%{$reset_color%}%{$fg_bold[cyan]%}:%~%{$reset_color%} %{$fg[red]%}[ %* ]%{$reset_color%} %(?,%{$fg[cyan]%}[ ☀ $? ]%{$reset_color%},%{$fg[red]%}[ ☂ $? ]%{$reset_color%}) $(git_prompt_info)
-%{$fg[cyan]%}⧉ $SHLVL %{$reset_color%}$(prompt_char) '
+PROMPT='%{$fg[cyan]%}%n@%m:%~ [ %* ] %(?,%{$fg[cyan]%}[ ☀ $? ],%{$fg[red]%}[ ☂ $? ]) %{$fg[red]%}[ $(ruby -e "print RUBY_VERSION, %(p), RUBY_PATCHLEVEL") ] %{$fg[green]%}[ ± $(git_prompt_short_sha) -$(git_prompt_info) ]
+%{$fg[green]%}☘ $SHLVL %{$reset_color%}$(prompt_char) '
+#%{$fg[cyan]%}⧉ $SHLVL %{$reset_color%}$(prompt_char) '
 #%_$(prompt_char) '
 
 RPROMPT=''
