@@ -1,34 +1,39 @@
+set nocompatible
+filetype off
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'vundle'
 Bundle 'endwise.vim'
 Bundle 'haml.zip'
+Bundle 'tpope/vim-haml'
 Bundle 'git-commit'
-Bundle 'rails.vim'
+Bundle 'tpope/vim-rails'
 Bundle 'YankRing.vim'
 Bundle 'quickrun.vim'
 Bundle 'open-browser.vim'
-Bundle 'git://github.com/tpope/vim-markdown.git'
+Bundle 'tpope/vim-markdown'
 Bundle 'neco-look'
 "Bundle 'surround.vim' "vim-reviewのためにvim-surroundを使う
-Bundle 'git://github.com/kana/vim-surround.git'
-Bundle 'git://github.com/vim-ruby/vim-ruby.git'
-Bundle 'git://github.com/motemen/git-vim.git'
-Bundle 'git://github.com/tpope/vim-fugitive.git'
-Bundle 'git://github.com/Shougo/neocomplcache.git'
-Bundle 'git://github.com/h1mesuke/vim-alignta.git'
-Bundle 'git://github.com/Shougo/unite.vim.git'
-Bundle 'git://github.com/ujihisa/unite-colorscheme.git'
-Bundle 'git://github.com/h1mesuke/unite-outline.git'
-Bundle 'git://github.com/ujihisa/unite-font.git'
-Bundle 'https://github.com/ujihisa/unite-locate.git'
-Bundle 'git://github.com/tsukkee/unite-help.git'
-Bundle 'git://github.com/tsukkee/unite-tag.git'
+Bundle 'kana/vim-surround'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'motemen/git-vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'Shougo/neocomplcache'
+Bundle 'h1mesuke/vim-alignta'
+Bundle 'Shougo/unite.vim'
+Bundle 'ujihisa/unite-colorscheme'
+Bundle 'h1mesuke/unite-outline'
+Bundle 'ujihisa/unite-font'
+Bundle 'ujihisa/unite-locate'
+Bundle 'tsukkee/unite-help'
+Bundle 'tsukkee/unite-tag'
 Bundle 'matchit.zip'
 Bundle 'cucumber.zip'
-Bundle 'git://github.com/kchmck/vim-coffee-script.git'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'Command-T'
-Bundle 'git://github.com/moro/vim-review.git'
+Bundle 'moro/vim-review'
 Bundle 'VimClojure'
 Bundle 'Rename'
 
@@ -42,16 +47,18 @@ Bundle 'Zenburn'
 Bundle 'mrkn256.vim'
 Bundle 'xoria256.vim'
 Bundle 'newspaper.vim'
-Bundle 'git://github.com/Lokaltog/vim-distinguished.git'
-Bundle 'git://github.com/nanotech/jellybeans.vim.git'
+Bundle 'Lokaltog/vim-distinguished'
+Bundle 'nanotech/jellybeans.vim'
 Bundle 'twilight'
-Bundle 'git://github.com/tpope/vim-vividchalk.git'
-Bundle 'git://github.com/altercation/vim-colors-solarized.git'
+Bundle 'tpope/vim-vividchalk'
+Bundle 'altercation/vim-colors-solarized'
 
-filetype on
-filetype indent on
-filetype plugin on
-syntax on
+filetype plugin indent on
+syntax enable
+
+"filetype on
+"filetype indent on
+"filetype plugin on
 
 set t_Co=256
 set background=dark
