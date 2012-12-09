@@ -37,6 +37,11 @@ function e {
 
 source ~/.zshenv
 
+
+if ! [ -e ~/.cline/cline.sock ] ; then
+  cline server start
+fi
+
 if [ $SHLVL = 1 ]; then
   export SCREENDIR=~/.screen/
   screen

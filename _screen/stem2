@@ -2,5 +2,5 @@
 source defaults
 
 caption always "%0`%=%1`"
-backtick 0 0 0 cline tick 0 15
+backtick 0 0 0 cline tick 15
 screen screen -S stem1 -qUmc .screen/stem1

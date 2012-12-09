@@ -1,9 +1,15 @@
 # coding: utf-8
 
-Cline.configure do |config|
-  config.pool_size  = 2000
-  config.append_collector Cline::Collectors::Feed
-  config.append_collector Cline::Collectors::Github
+ENV['NOTIFY'] = 'notify-send'
 
+Cline.configure do |config|
+  config.notifications_limit = 2000
+  config.notify_io = Cline::NotifyIO::WithNotify.new
+
+  config.collectors << Cline::Collectors::Feed
+
+  config.collectors << Cline::Collectors::Github
   Cline::Collectors::Github.login_name = 'hibariya'
+
+  config.jobs << Cline::ScheduledJob.new(-> { Time.now.min.zero? }, &:collect)
 end
