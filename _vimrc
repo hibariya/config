@@ -138,7 +138,7 @@ nnoremap <unique> <silent> TN :tabnext<CR>
 nnoremap <unique> <silent> Tp :tabprevious<CR>
 nnoremap <unique> <silent> TP :tabprevious<CR>
 nnoremap <unique> <silent> Ya :YRShow<CR>
-nnoremap <unique> <silent> <space>ta :tabnew<CR>
+nnoremap <unique> <silent> <space>ta :tabnew<CR>:e .<CR>
 nnoremap <unique> <silent> <space>tm :tabm<space>
 nnoremap <unique> <silent> <space>u<space> :Unite<space>
 nnoremap <unique> <silent> <space>ub :Unite buffer<CR>
