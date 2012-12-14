@@ -80,7 +80,8 @@ end
 task :cline do
   mkdir_p home.join('.cline')
 
-  install '_cline/config', home.join('.cline/')
+  install '_cline/config',    home.join('.cline/')
+  install '_cline/feeds.xml', home.join('.cline/')
 end
 
 task default: :install

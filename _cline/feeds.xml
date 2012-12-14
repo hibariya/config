@@ -94,5 +94,6 @@
   <outline title="Hacker News" htmlUrl="http://news.ycombinator.com/" type="rss" xmlUrl="http://news.ycombinator.com/rss" />
   <outline title="QA@IT - すべての質問" htmlUrl="http://qa.atmarkit.co.jp/" type="atom" xmlUrl="http://qa.atmarkit.co.jp/feed/questions.atom" />
   <outline title="英語 with Luke" htmlUrl="http://www.eigowithluke.com/" type="atom" xmlUrl="http://www.eigowithluke.com/feed/" />
+  <outline title="Newest &#39;*ruby*&#39; Questions - Stack Overflow" htmlUrl="http://stackoverflow.com/questions/tagged/*ruby*" type="atom" xmlUrl="http://stackoverflow.com/feeds/tag/*ruby*" />
 </outline>
 </body></opml>
