@@ -95,5 +95,6 @@
   <outline title="QA@IT - すべての質問" htmlUrl="http://qa.atmarkit.co.jp/" type="atom" xmlUrl="http://qa.atmarkit.co.jp/feed/questions.atom" />
   <outline title="英語 with Luke" htmlUrl="http://www.eigowithluke.com/" type="atom" xmlUrl="http://www.eigowithluke.com/feed/" />
   <outline title="Newest &#39;*ruby*&#39; Questions - Stack Overflow" htmlUrl="http://stackoverflow.com/questions/tagged/*ruby*" type="atom" xmlUrl="http://stackoverflow.com/feeds/tag/*ruby*" />
+  <outline title="Bug List (gentoo)" htmlUrl="https://bugs.gentoo.org/buglist.cgi?chfield=%5BBug%20creation%5D&amp;chfieldfrom=-1D&amp;chfieldto=Now&amp;query_format=advanced&amp;title=Bug%20List" type="atom" xmlUrl="https://bugs.gentoo.org/buglist.cgi?chfield=%5BBug%20creation%5D&amp;chfieldfrom=-1D&amp;chfieldto=Now&amp;ctype=atom&amp;query_format=advanced&amp;title=Bug%20List" />
 </outline>
 </body></opml>
