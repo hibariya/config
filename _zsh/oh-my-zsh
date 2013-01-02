@@ -55,7 +55,5 @@ function prompt_char {
 
 PROMPT='%{$fg[cyan]%}%n@%m:%~ [ %* ] %(?,%{$fg[cyan]%}[ ☀ $? ],%{$fg[red]%}[ ☂ $? ]) %{$fg[red]%}[ $(ruby -e "print RUBY_VERSION, %(p), RUBY_PATCHLEVEL") ] %{$fg[green]%}[ ± $(git_prompt_short_sha) -$(git_prompt_info) ]
 %{$fg[green]%}☘ $SHLVL %{$reset_color%}$(prompt_char) '
-#%{$fg[cyan]%}⧉ $SHLVL %{$reset_color%}$(prompt_char) '
-#%_$(prompt_char) '
 
 RPROMPT=''
