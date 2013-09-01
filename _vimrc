@@ -116,6 +116,8 @@ set shell=zsh
 set expandtab
 set autoindent
 set backspace=2
+set tabstop=2
+set shiftwidth=2
 set wrapscan
 set title
 set foldmethod=marker
