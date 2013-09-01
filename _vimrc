@@ -4,61 +4,58 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'vundle'
-Bundle 'endwise.vim'
-Bundle 'haml.zip'
-Bundle 'tpope/vim-haml'
-Bundle 'git-commit'
-Bundle 'tpope/vim-rails'
-Bundle 'YankRing.vim'
-Bundle 'quickrun.vim'
-Bundle 'open-browser.vim'
-Bundle 'tpope/vim-markdown'
-Bundle 'neco-look'
-"Bundle 'surround.vim' "vim-reviewのためにvim-surroundを使う
-Bundle 'kana/vim-surround'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'motemen/git-vim'
-Bundle 'tpope/vim-fugitive'
+Bundle 'Command-T'
+Bundle 'Rename'
 Bundle 'Shougo/neocomplcache'
-Bundle 'h1mesuke/vim-alignta'
 Bundle 'Shougo/unite.vim'
-Bundle 'ujihisa/unite-colorscheme'
+Bundle 'VimClojure'
+Bundle 'YankRing.vim'
+Bundle 'cucumber.zip'
+Bundle 'endwise.vim'
+Bundle 'git-commit'
 Bundle 'h1mesuke/unite-outline'
-Bundle 'ujihisa/unite-font'
-Bundle 'ujihisa/unite-locate'
+Bundle 'h1mesuke/vim-alignta'
+Bundle 'haml.zip'
+"Bundle 'surround.vim' vim-reviewのためにvim-surroundを使う
+Bundle 'kana/vim-surround'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'matchit.zip'
+Bundle 'moro/vim-review'
+Bundle 'motemen/git-vim'
+Bundle 'neco-look'
+Bundle 'open-browser.vim'
+Bundle 'quickrun.vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-rails'
 Bundle 'tsukkee/unite-help'
 Bundle 'tsukkee/unite-tag'
-Bundle 'matchit.zip'
-Bundle 'cucumber.zip'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'Command-T'
-Bundle 'moro/vim-review'
-Bundle 'VimClojure'
-Bundle 'Rename'
+Bundle 'ujihisa/unite-colorscheme'
+Bundle 'ujihisa/unite-font'
+Bundle 'ujihisa/unite-locate'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'vimwiki'
+Bundle 'vundle'
 
 " colorschemes
-Bundle 'vim_colors'
-Bundle 'pyte'
 Bundle 'DarkZen-Color-Scheme'
-Bundle 'molokai'
+Bundle 'Lokaltog/vim-distinguished'
 Bundle 'Wombat'
 Bundle 'Zenburn'
-Bundle 'mrkn256.vim'
-Bundle 'xoria256.vim'
-Bundle 'newspaper.vim'
-Bundle 'Lokaltog/vim-distinguished'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'twilight'
-Bundle 'tpope/vim-vividchalk'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'molokai'
+Bundle 'mrkn256.vim'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'newspaper.vim'
+Bundle 'pyte'
+Bundle 'tpope/vim-vividchalk'
+Bundle 'twilight'
+Bundle 'vim_colors'
+Bundle 'xoria256.vim'
 
 filetype plugin indent on
 syntax enable
-
-"filetype on
-"filetype indent on
-"filetype plugin on
 
 set t_Co=256
 set background=dark
@@ -85,8 +82,6 @@ set fileformats=unix,dos
 
 " Tab
 "set expandtab
-set smartindent
-set ts=2 sw=2 sts=2
 
 "statusline
 set laststatus=2
@@ -207,3 +202,6 @@ vmap gx <Plug>(openbrowser-smart-search)
 
 " crontab error workaround
 set backupskip=/tmp/*,/private/tmp/*"
+
+" vimwiki
+let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
