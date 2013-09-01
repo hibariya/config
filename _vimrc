@@ -19,6 +19,7 @@ Bundle 'haml.zip'
 "Bundle 'surround.vim' vim-reviewのためにvim-surroundを使う
 Bundle 'kana/vim-surround'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'itchyny/lightline.vim'
 Bundle 'matchit.zip'
 Bundle 'moro/vim-review'
 Bundle 'motemen/git-vim'
@@ -205,3 +206,7 @@ set backupskip=/tmp/*,/private/tmp/*"
 
 " vimwiki
 let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
+
+let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ }
