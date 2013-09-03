@@ -4,6 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'rking/ag.vim'
 Bundle 'Command-T'
 Bundle 'Rename'
 Bundle 'Shougo/neocomplcache'
@@ -23,12 +24,13 @@ Bundle 'itchyny/lightline.vim'
 Bundle 'matchit.zip'
 Bundle 'moro/vim-review'
 Bundle 'motemen/git-vim'
+Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'neco-look'
 Bundle 'open-browser.vim'
+Bundle 'plasticboy/vim-markdown'
 Bundle 'quickrun.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tsukkee/unite-help'
 Bundle 'tsukkee/unite-tag'
@@ -201,6 +203,17 @@ vmap gx <Plug>(openbrowser-smart-search)
 
 " crontab error workaround
 set backupskip=/tmp/*,/private/tmp/*"
+
+" plasticbody/vim-markdown
+let g:vim_markdown_folding_disabled=1
+
+" vim-indent-guides
+let g:indent_guides_guide_size = 1
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_start_level = 2
+
+highlight IndentGuidesOdd  ctermbg=darkgray
+highlight IndentGuidesEven ctermbg=darkcyan
 
 " vimwiki
 let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
