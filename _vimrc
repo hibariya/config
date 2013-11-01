@@ -4,6 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'bling/vim-airline'
 Bundle 'rking/ag.vim'
 Bundle 'Command-T'
 Bundle 'Rename'
@@ -20,7 +21,6 @@ Bundle 'haml.zip'
 "Bundle 'surround.vim' vim-reviewのためにvim-surroundを使う
 Bundle 'kana/vim-surround'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'itchyny/lightline.vim'
 Bundle 'matchit.zip'
 Bundle 'moro/vim-review'
 Bundle 'motemen/git-vim'
@@ -38,7 +38,7 @@ Bundle 'ujihisa/unite-colorscheme'
 Bundle 'ujihisa/unite-font'
 Bundle 'ujihisa/unite-locate'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'vimwiki'
+"Bundle 'vimwiki'
 Bundle 'vundle'
 
 " colorschemes
@@ -218,6 +218,21 @@ highlight IndentGuidesEven ctermbg=darkcyan
 " vimwiki
 let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
 
-let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
-      \ }
+" airline
+let g:airline_theme = 'bubblegum'
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
