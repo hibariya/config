@@ -1,5 +1,4 @@
 # oh-my-zsh
-plugins=(screen git rbenv ruby gem rails3 heroku)
 source ~/.zsh/oh-my-zsh
 
 # rbenv
@@ -37,12 +36,9 @@ function e {
 
 source ~/.zshenv
 
-
-if ! [ -e ~/.cline/cline.sock ] ; then
-  cline server start
-fi
-
-if [ $SHLVL = 1 ]; then
+if ! [ $SCREENED = 1 ]; then
   export SCREENDIR=~/.screen/
-  screen
+  export SCREENED=1
+
+  screen -c .screen/stem1
 fi

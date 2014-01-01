@@ -20,10 +20,10 @@ export PGDATA=/usr/local/var/postgres
 
 export RETTER_HOME=$HOME/d/projects/github/hibariya.github.com
 
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
-
 export RUBYOPT=""
 
 export BROWSER=google-chrome
+
+alias emoji='gnome-open http://www.emoji-cheat-sheet.com/'
+
+alias wkhtmltopdf=/usr/bin/wkhtmltopdf # workaround for wkhtmltopdf gem

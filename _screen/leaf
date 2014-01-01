@@ -6,7 +6,7 @@ source defaults
 
 # Keys
 escape "^Tt"
-zombie "^["
+#zombie "^["
 bind "w" windowlist -b
 bind "^]" paste "[.]"
 bind "u" encoding "UTF-8"
