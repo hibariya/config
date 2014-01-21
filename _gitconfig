@@ -16,3 +16,11 @@
   excludesfile = ~/.gitignore
 [color]
   ui = true
+[push]
+	default = matching
+[credential]
+	helper = store
+[pager]
+  log = diff-highlight | less -X
+  show = diff-highlight | less -X
+  diff = diff-highlight | less -X
