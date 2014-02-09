@@ -51,6 +51,8 @@ Bundle 'Lokaltog/vim-distinguished'
 Bundle 'Wombat'
 Bundle 'Zenburn'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'desert256.vim'
+Bundle 'jellybeans.vim'
 Bundle 'molokai'
 Bundle 'mrkn256.vim'
 Bundle 'nanotech/jellybeans.vim'
@@ -64,8 +66,7 @@ Bundle 'xoria256.vim'
 filetype plugin indent on
 syntax enable
 
-colorscheme vividchalk
-highlight CursorLine gui=underline
+set t_Co=256
 set ambiwidth=double
 set autoindent
 set autoread
@@ -92,13 +93,14 @@ set shell=zsh
 set shiftwidth=2
 set showmatch
 set smartcase
-set t_Co=256
 set tabstop=2
 set title
 set ttymouse=xterm2
 set undolevels=1000
 set wildmode=list:longest
 set wrapscan
+colorscheme vividchalk
+highlight CursorLine gui=underline
 
 "encoding
 set enc=utf-8
@@ -167,11 +169,11 @@ let g:vim_markdown_folding_disabled=1
 
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_start_level=1
-let g:indent_guides_auto_colors=1
+let g:indent_guides_start_level=2
+let g:indent_guides_auto_colors=0
 let g:indent_guides_guide_size = 1
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black   ctermbg=black
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=darkgrey
 
 " vimwiki
 let g:vimwiki_list = [{'path': '~/d/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
