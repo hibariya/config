@@ -7,7 +7,10 @@
 
   with_items:
     - .vimrc
+    - .gvimrc
     - .zshrc
+    - .zsh/oh-my-zsh
+    - .ssh/config
     - .irbrc
     - .gitconfig
     - .gitignore
