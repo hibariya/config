@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'Command-T'
+Plugin 'kien/ctrlp.vim'
 Plugin 'Rename'
 Plugin 'Shougo/neocomplcache'
 Plugin 'Shougo/unite.vim'

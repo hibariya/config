@@ -1,0 +1,37 @@
+---
+- name: Install oh-my-zsh
+  git: repo=https://github.com/robbyrussell/oh-my-zsh.git dest=~/.oh-my-zsh
+
+- name: Copy my dotfiles
+  copy: src=~/d/projects/github/config/home/{{item}} dest=~/{{item}}
+
+  with_items:
+    - .vimrc
+    - .zshrc
+    - .irbrc
+    - .gitconfig
+    - .gitignore
+    - .screenrc
+    - .screen/leaf
+    - .screen/defaults
+    - .screen/stem1
+    - .screen/stem2
+    - .screen/stem3
+    - .screen/stem4
+
+- name: Clone Vundle
+  git: repo=https://github.com/gmarik/Vundle.vim.git dest=~/.vim/bundle/Vundle.vim
+
+- name: Install Vim plugins
+  command: vim +PluginInstall! +qall
+
+- name: Clone rbenv
+  git: repo=https://github.com/sstephenson/rbenv.git dest=~/.rbenv
+
+- name: Clone ruby-build
+  git: repo=https://github.com/sstephenson/ruby-build.git dest=~/.rbenv/plugins/ruby-build
+
+- name: Install ruby-build
+  shell: PREFIX=~/.rbenv ./install.sh
+  args:
+    chdir: ~/.rbenv/plugins/ruby-build
