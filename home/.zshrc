@@ -25,8 +25,6 @@ alias info='info --vi-keys'
 alias bo='bundle open'
 alias be='bundle exec'
 alias bu='bundle update'
-alias co='cline open'
-alias g='git'
 alias reload='source ~/.zshrc'
 
 function v() { vim `echo $* | gsed -e "s/:\([0-9]\+\)/ +\1/"` }
