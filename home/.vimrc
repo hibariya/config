@@ -201,3 +201,26 @@ let g:airline_symbols.paste      = 'ρ'
 let g:airline_symbols.paste      = 'Þ'
 let g:airline_symbols.paste      = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
+
+function! PlaySound(path)
+  call system('aplay ~/d/sounds/' . a:path . ' &')
+endfunction
+
+autocmd BufRead         * call PlaySound('yumenikki/エフェクト使用.WAV')
+autocmd BufEnter        * call PlaySound('yumenikki/SUZU.WAV')
+autocmd BufWritePost    * call PlaySound('yumenikki/カラリロロ.WAV')
+autocmd CmdwinEnter     * call PlaySound('yumenikki/インフォ音.WAV')
+autocmd ColorScheme     * call PlaySound('yumenikki/Sbend.WAV')
+autocmd CompleteDone    * call PlaySound('yumenikki/決定音.WAV')
+autocmd CursorHold      * call PlaySound('yumenikki/エフェクト解除.WAV')
+autocmd CursorMoved     * call PlaySound('yumenikki/足音_008.wav') " PlaySound('yumenikki/足音_012.WAV'), PlaySound('yumenikki/足音_013.WAV')
+autocmd CursorMovedI    * call PlaySound('yumenikki/足音_007.WAV') " PlaySound('yumenikki/足音_001.wav')
+autocmd InsertEnter     * call PlaySound("yumenikki/青.WAV")
+autocmd InsertLeave     * call PlaySound("yumenikki/赤.WAV")
+autocmd QuickFixCmdPre  * call PlaySound('yumenikki/ＧＥＴ音１.WAV')
+autocmd ShellCmdPost    * call PlaySound('yumenikki/キャー１.WAV')
+autocmd SwapExists      * call PlaySound('yumenikki/ブザー１.WAV')
+autocmd VimEnter        * call PlaySound('yumenikki/エコーベル１.WAV')
+autocmd VimLeave        * call PlaySound('yumenikki/頬をつねる.WAV')
+autocmd EncodingChanged * call PlaySound('yumenikki/ＧＥＴ音１.WAV')
+autocmd VimResized      * call PlaySound('yumenikki/幽霊.WAV')
