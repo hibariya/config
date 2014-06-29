@@ -6,7 +6,6 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'Command-T'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Rename'
 Plugin 'Shougo/neocomplcache'
@@ -28,6 +27,7 @@ Plugin 'moro/vim-review'
 Plugin 'motemen/git-vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'neco-look'
+Plugin 'scrooloose/nerdtree'
 Plugin 'open-browser.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'quickrun.vim'
@@ -135,14 +135,12 @@ nnoremap <unique> <silent> TP :tabprevious<CR>
 nnoremap <unique> <silent> <space>ya :YRShow<CR>
 nnoremap <unique> <silent> <space>ta :tabnew<CR>:e .<CR>
 nnoremap <unique> <silent> <space>tm :tabm<space>
+nnoremap <unique> <silent> <space>fi :NERDTree<CR>
+nnoremap <unique> <silent> <space>Fi :Unite file<CR>
 nnoremap <unique> <silent> <space>bu :Unite buffer<CR>
-nnoremap <unique> <silent> <space>fi :Unite file<CR>
-nnoremap <unique> <silent> <space>mr :Unite file_mru<CR>
 nnoremap <unique> <silent> <space>re :Unite register<CR>
 nnoremap <unique> <silent> <space>ou :Unite outline<CR>
-nnoremap <unique> <silent> <space>lo :Unite locate<CR>
 nnoremap <unique> <silent> <space>co :Unite colorscheme<CR>
-nnoremap <unique> <silent> <space>un :Unite buffer tab window register file_mru directory_mru file bookmark<CR>
 nnoremap <unique> <silent> <space>xx :qa<CR>
 nnoremap <unique> <silent> <space>XX :qa!<CR>
 nnoremap <unique> <silent> <Left>  :tabprevious <CR>
