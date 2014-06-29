@@ -27,7 +27,6 @@ Plugin 'moro/vim-review'
 Plugin 'motemen/git-vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'neco-look'
-Plugin 'scrooloose/nerdtree'
 Plugin 'open-browser.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'quickrun.vim'
@@ -45,7 +44,6 @@ Plugin 'ujihisa/unite-colorscheme'
 Plugin 'ujihisa/unite-font'
 Plugin 'ujihisa/unite-locate'
 Plugin 'vim-ruby/vim-ruby'
-"Plugin 'vimwiki'
 
 "colorscheme
 
@@ -135,8 +133,8 @@ nnoremap <unique> <silent> TP :tabprevious<CR>
 nnoremap <unique> <silent> <space>ya :YRShow<CR>
 nnoremap <unique> <silent> <space>ta :tabnew<CR>:e .<CR>
 nnoremap <unique> <silent> <space>tm :tabm<space>
-nnoremap <unique> <silent> <space>fi :NERDTree<CR>
-nnoremap <unique> <silent> <space>Fi :Unite file<CR>
+"nnoremap <unique> <silent> <space>Fi :NERDTree<CR>
+nnoremap <unique> <silent> <space>fi :Unite file<CR>
 nnoremap <unique> <silent> <space>bu :Unite buffer<CR>
 nnoremap <unique> <silent> <space>re :Unite register<CR>
 nnoremap <unique> <silent> <space>ou :Unite outline<CR>
@@ -211,6 +209,7 @@ autocmd CmdwinEnter     * call PlaySound('yumenikki/インフォ音.WAV')
 autocmd ColorScheme     * call PlaySound('yumenikki/Sbend.WAV')
 autocmd CompleteDone    * call PlaySound('yumenikki/決定音.WAV')
 autocmd CursorHold      * call PlaySound('yumenikki/エフェクト解除.WAV')
+autocmd CursorHoldI     * call PlaySound('yumenikki/エフェクト解除.WAV')
 autocmd CursorMoved     * call PlaySound('yumenikki/足音_008.wav') " PlaySound('yumenikki/足音_012.WAV'), PlaySound('yumenikki/足音_013.WAV')
 autocmd CursorMovedI    * call PlaySound('yumenikki/足音_007.WAV') " PlaySound('yumenikki/足音_001.wav')
 autocmd InsertEnter     * call PlaySound("yumenikki/青.WAV")
@@ -218,7 +217,7 @@ autocmd InsertLeave     * call PlaySound("yumenikki/赤.WAV")
 autocmd QuickFixCmdPre  * call PlaySound('yumenikki/ＧＥＴ音１.WAV')
 autocmd ShellCmdPost    * call PlaySound('yumenikki/キャー１.WAV')
 autocmd SwapExists      * call PlaySound('yumenikki/ブザー１.WAV')
-autocmd VimEnter        * call PlaySound('yumenikki/エコーベル１.WAV')
+autocmd VimEnter        * call PlaySound('yumenikki/Sbend.WAV') " PlaySound('yumenikki/エコーベル１.WAV')
 autocmd VimLeave        * call PlaySound('yumenikki/頬をつねる.WAV')
 autocmd EncodingChanged * call PlaySound('yumenikki/ＧＥＴ音１.WAV')
 autocmd VimResized      * call PlaySound('yumenikki/幽霊.WAV')
