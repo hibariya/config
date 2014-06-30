@@ -2,26 +2,6 @@
 - name: Install oh-my-zsh
   git: repo=https://github.com/robbyrussell/oh-my-zsh.git dest=~/.oh-my-zsh
 
-- name: Copy my dotfiles
-  copy: src=~/d/projects/github/config/home/{{item}} dest=~/{{item}}
-
-  with_items:
-    - .vimrc
-    - .gvimrc
-    - .zshrc
-    - .zsh/oh-my-zsh
-    - .ssh/config
-    - .irbrc
-    - .gitconfig
-    - .gitignore
-    - .screenrc
-    - .screen/leaf
-    - .screen/defaults
-    - .screen/stem1
-    - .screen/stem2
-    - .screen/stem3
-    - .screen/stem4
-
 - name: Clone Vundle
   git: repo=https://github.com/gmarik/Vundle.vim.git dest=~/.vim/bundle/Vundle.vim
 
@@ -38,3 +18,12 @@
   shell: PREFIX=~/.rbenv ./install.sh
   args:
     chdir: ~/.rbenv/plugins/ruby-build
+
+- name: Make .ssh directory
+  file: path=~/.ssh state=directory
+
+- name: Make .zsh directory
+  file: path=~/.zsh state=directory
+
+- name: Make .screen directory
+  file: path=~/.screen state=directory

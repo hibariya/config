@@ -1,0 +1,18 @@
+---
+- name: Copy my base dotfiles
+  copy: src=~/d/projects/github/config/home/{{item}} dest=~/{{item}}
+
+  with_items:
+    - .vimrc
+    - .ssh/config
+    - .irbrc
+    - .gitconfig
+    - .gitignore
+
+- name: Copy my customized dotfiles
+  copy: src=~/d/projects/github/config/home/remote/{{item}} dest=~/{{item}}
+
+  with_items:
+    - .zshrc
+    - .zshenv
+    - .zsh/oh-my-zsh

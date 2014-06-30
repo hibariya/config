@@ -100,7 +100,11 @@ set ttymouse=xterm2
 set undolevels=1000
 set wildmode=list:longest
 set wrapscan
-colorscheme vividchalk
+
+if !empty(globpath(&rtp, 'colors/vividchalk.vim'))
+  colorscheme vividchalk
+endif
+
 highlight CursorLine gui=underline
 
 "encoding
@@ -199,25 +203,27 @@ let g:airline_symbols.paste      = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
 function! PlaySound(path)
-  call system('aplay ~/d/sounds/' . a:path . ' &')
+  call system('aplay -q ~/d/sounds/' . a:path . ' &')
 endfunction
 
-autocmd BufRead         * call PlaySound('yumenikki/カラリロロ.WAV')
-autocmd BufEnter        * call PlaySound('yumenikki/SUZU.WAV')
-autocmd BufWritePost    * call PlaySound('yumenikki/キャー１.WAV')
-autocmd CmdwinEnter     * call PlaySound('yumenikki/インフォ音.WAV')
-autocmd ColorScheme     * call PlaySound('yumenikki/Sbend.WAV')
-autocmd CompleteDone    * call PlaySound('yumenikki/決定音.WAV')
-autocmd CursorHold      * call PlaySound('yumenikki/キュ１.wav')
-autocmd CursorHoldI     * call PlaySound('yumenikki/キュ２.wav')
-autocmd CursorMoved     * call PlaySound('yumenikki/足音_008.wav') " PlaySound('yumenikki/足音_012.WAV'), PlaySound('yumenikki/足音_013.WAV')
-autocmd CursorMovedI    * call PlaySound('yumenikki/足音_007.WAV') " PlaySound('yumenikki/足音_001.wav')
-autocmd InsertEnter     * call PlaySound("yumenikki/赤.WAV")
-autocmd InsertLeave     * call PlaySound("yumenikki/青.WAV")
-autocmd QuickFixCmdPre  * call PlaySound('yumenikki/ＧＥＴ音１.WAV')
-autocmd ShellCmdPost    * call PlaySound('yumenikki/猫.WAV')
-autocmd SwapExists      * call PlaySound('yumenikki/ブザー１.WAV')
-autocmd VimEnter        * call PlaySound('yumenikki/Sbend.WAV') " PlaySound('yumenikki/エコーベル１.WAV')
-autocmd VimLeave        * call PlaySound('yumenikki/頬をつねる.WAV')
-autocmd EncodingChanged * call PlaySound('yumenikki/ＧＥＴ音１.WAV')
-autocmd VimResized      * call PlaySound('yumenikki/幽霊.WAV')
+if executable('aplay')
+  autocmd BufRead         * call PlaySound('yumenikki/カラリロロ.WAV')
+  autocmd BufEnter        * call PlaySound('yumenikki/SUZU.WAV')
+  autocmd BufWritePost    * call PlaySound('yumenikki/キャー１.WAV')
+  autocmd CmdwinEnter     * call PlaySound('yumenikki/インフォ音.WAV')
+  autocmd ColorScheme     * call PlaySound('yumenikki/Sbend.WAV')
+  autocmd CompleteDone    * call PlaySound('yumenikki/決定音.WAV')
+  autocmd CursorHold      * call PlaySound('yumenikki/キュ１.wav')
+  autocmd CursorHoldI     * call PlaySound('yumenikki/キュ２.wav')
+  autocmd CursorMoved     * call PlaySound('yumenikki/足音_008.wav') " PlaySound('yumenikki/足音_012.WAV'), PlaySound('yumenikki/足音_013.WAV')
+  autocmd CursorMovedI    * call PlaySound('yumenikki/足音_007.WAV') " PlaySound('yumenikki/足音_001.wav')
+  autocmd InsertEnter     * call PlaySound("yumenikki/赤.WAV")
+  autocmd InsertLeave     * call PlaySound("yumenikki/青.WAV")
+  autocmd QuickFixCmdPre  * call PlaySound('yumenikki/ＧＥＴ音１.WAV')
+  autocmd ShellCmdPost    * call PlaySound('yumenikki/猫.WAV')
+  autocmd SwapExists      * call PlaySound('yumenikki/ブザー１.WAV')
+  autocmd VimEnter        * call PlaySound('yumenikki/Sbend.WAV') " PlaySound('yumenikki/エコーベル１.WAV')
+  autocmd VimLeave        * call PlaySound('yumenikki/頬をつねる.WAV')
+  autocmd EncodingChanged * call PlaySound('yumenikki/ＧＥＴ音１.WAV')
+  autocmd VimResized      * call PlaySound('yumenikki/幽霊.WAV')
+endif
