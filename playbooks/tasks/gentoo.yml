@@ -1,4 +1,13 @@
 ---
+- name: Make .ssh directory
+  file: path=~/.ssh state=directory
+
+- name: Make .zsh directory
+  file: path=~/.zsh state=directory
+
+- name: Make .screen directory
+  file: path=~/.screen state=directory
+
 - name: Copy my dotfiles
   copy: src=~/d/projects/github/config/home/{{item}} dest=~/{{item}}
 
