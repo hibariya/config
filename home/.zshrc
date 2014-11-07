@@ -38,5 +38,5 @@ if ! [ $SCREENED = 1 ]; then
   export SCREENDIR=~/.screen/
   export SCREENED=1
 
-  screen -c .screen/stem1
+  screen -S leaf -qUmc .screen/leaf
 fi
