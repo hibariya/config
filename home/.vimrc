@@ -203,12 +203,12 @@ let g:airline_symbols.paste      = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
 function! PlaySound(path)
-  call system('aplay -q ~/d/sounds/' . a:path . ' &')
+  call system('aplay -qN ~/d/sounds/' . a:path . ' > /dev/null 2>&1 &')
 endfunction
 
 if executable('aplay')
   autocmd BufRead         * call PlaySound('yumenikki/カラリロロ.WAV')
-  autocmd BufEnter        * call PlaySound('yumenikki/SUZU.WAV')
+  "autocmd BufEnter        * call PlaySound('yumenikki/FC移動.WAV')
   autocmd BufWritePost    * call PlaySound('yumenikki/エフェクト使用.WAV') "PlaySound('yumenikki/キャー１.WAV')
   autocmd CmdwinEnter     * call PlaySound('yumenikki/ＧＥＴ音１.WAV')
   autocmd ColorScheme     * call PlaySound('yumenikki/Sbend.WAV')
