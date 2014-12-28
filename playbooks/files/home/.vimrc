@@ -5,17 +5,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-
 Plugin 'kien/ctrlp.vim'
 Plugin 'Rename'
-Plugin 'Shougo/neocomplcache'
-Plugin 'Shougo/unite.vim'
 Plugin 'bling/vim-airline'
 Plugin 'cucumber.zip'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'endwise.vim'
 Plugin 'gem.vim'
-Plugin 'h1mesuke/unite-outline'
 Plugin 'h1mesuke/vim-alignta'
 Plugin 'haml.zip'
 Plugin 'kana/vim-surround'
@@ -26,7 +22,6 @@ Plugin 'matchit.zip'
 Plugin 'moro/vim-review'
 Plugin 'motemen/git-vim'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'neco-look'
 Plugin 'open-browser.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'quickrun.vim'
@@ -38,11 +33,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'tsukkee/unite-help'
-Plugin 'tsukkee/unite-tag'
-Plugin 'ujihisa/unite-colorscheme'
-Plugin 'ujihisa/unite-font'
-Plugin 'ujihisa/unite-locate'
 Plugin 'vim-ruby/vim-ruby'
 
 "colorscheme
@@ -75,6 +65,7 @@ set background=dark
 set backspace=2
 set clipboard+=unnamed
 set cursorline
+set completeopt=menuone,preview
 set directory-=.
 set expandtab
 set foldmethod=marker
@@ -134,15 +125,9 @@ let g:git_command_edit = 'rightbelow vnew'
 " keybinds
 nnoremap <unique> <silent> TN :tabnext<CR>
 nnoremap <unique> <silent> TP :tabprevious<CR>
-nnoremap <unique> <silent> <space>ya :YRShow<CR>
 nnoremap <unique> <silent> <space>ta :tabnew<CR>:e .<CR>
 nnoremap <unique> <silent> <space>tm :tabm<space>
 "nnoremap <unique> <silent> <space>Fi :NERDTree<CR>
-nnoremap <unique> <silent> <space>fi :Unite file<CR>
-nnoremap <unique> <silent> <space>bu :Unite buffer<CR>
-nnoremap <unique> <silent> <space>re :Unite register<CR>
-nnoremap <unique> <silent> <space>ou :Unite outline<CR>
-nnoremap <unique> <silent> <space>co :Unite colorscheme<CR>
 nnoremap <unique> <silent> <space>xx :qa<CR>
 nnoremap <unique> <silent> <space>XX :qa!<CR>
 nnoremap <unique> <silent> <Left>  :tabprevious <CR>
@@ -151,16 +136,6 @@ nnoremap <unique> <silent> <Up>  :bprevious <CR>
 nnoremap <unique> <silent> <Down> :bnext <CR>
 
 cnoremap <C-x> <C-r>=expand('%:p:h')<CR>/
-
-" neocomplcache
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_max_list = 10
-let g:neocomplcache_max_keyword_width = 30
-let g:neocomplcache_enable_wildcard = 1
-let g:neocomplcache_enable_smart_case = 1
-
-" workaround: Option 'omnifunc' is not set
-"setlocal omnifunc=syntaxcomplete#Complete
 
 " open-browser.vim
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
@@ -177,9 +152,6 @@ let g:indent_guides_auto_colors=0
 let g:indent_guides_guide_size = 1
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black   ctermbg=black
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=darkgrey
-
-" vimwiki
-let g:vimwiki_list = [{'path': '~/d/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
 
 " alignta
 let g:alignta_default_arguments = '<<0 \ /1'
