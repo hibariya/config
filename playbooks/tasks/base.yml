@@ -17,4 +17,4 @@
 - name: Install ruby-build
   shell: PREFIX=~/.rbenv ./install.sh
   args:
-    chdir: /home/hibariya/.rbenv/plugins/ruby-build
+    chdir: {{ansible_env.HOME}}/.rbenv/plugins/ruby-build

@@ -6,7 +6,7 @@
   file: path=~/.zsh state=directory
 
 - name: Copy my base dotfiles
-  copy: src=~/d/projects/github/config/home/{{item}} dest=~/{{item}}
+  copy: src=files/home/{{item}} dest=~/{{item}}
 
   with_items:
     - .vimrc
@@ -16,7 +16,7 @@
     - .gitignore
 
 - name: Copy my customized dotfiles
-  copy: src=~/d/projects/github/config/home/remote/{{item}} dest=~/{{item}}
+  copy: src=files/home/remote/{{item}} dest=~/{{item}}
 
   with_items:
     - .zshrc

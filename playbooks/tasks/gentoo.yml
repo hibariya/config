@@ -9,7 +9,7 @@
   file: path=~/.screen state=directory
 
 - name: Copy my dotfiles
-  copy: src=~/d/projects/github/config/home/{{item}} dest=~/{{item}}
+  copy: src=files/home/{{item}} dest=~/{{item}}
 
   with_items:
     - .vimrc
