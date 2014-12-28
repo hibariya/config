@@ -6,7 +6,7 @@ export PATH=$HOME/.rbenv/bin:$HOME/bin:$PATH
 eval "$(rbenv init -)"
 source ~/.rbenv/completions/rbenv.zsh
 
-autoload -U compinit
+autoload -U compinit zmv
 compinit
 
 unsetopt CORRECT_ALL
