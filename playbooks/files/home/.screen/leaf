@@ -32,7 +32,7 @@ sorendition "+rb kc"
 defscrollback 8192
 
 defbce "on"
-term xterm-256color
+term screen-bce
 
 # default screens
 chdir

@@ -1,6 +1,6 @@
 [user]
   name = hibariya
-  email = celluloid.key@gmail.com
+  email = hibariya@gmail.com
 [alias]
   pr = pull --rebase --prune
   ds = diff --staged
