@@ -26,6 +26,8 @@ Plugin 'open-browser.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'quickrun.vim'
 Plugin 'rking/ag.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-commentary'
@@ -127,7 +129,7 @@ nnoremap <unique> <silent> TN :tabnext<CR>
 nnoremap <unique> <silent> TP :tabprevious<CR>
 nnoremap <unique> <silent> <space>ta :tabnew<CR>:e .<CR>
 nnoremap <unique> <silent> <space>tm :tabm<space>
-"nnoremap <unique> <silent> <space>Fi :NERDTree<CR>
+nnoremap <unique> <silent> <space>fi :NERDTree<CR>
 nnoremap <unique> <silent> <space>xx :qa<CR>
 nnoremap <unique> <silent> <space>XX :qa!<CR>
 nnoremap <unique> <silent> <Left>  :tabprevious <CR>
@@ -157,22 +159,15 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=darkg
 let g:alignta_default_arguments = '<<0 \ /1'
 
 " airline
-let g:airline_theme = 'bubblegum'
+"let g:airline_theme = 'bubblegum'
+let g:airline_theme = 'tomorrow'
+let g:airline#extensions#syntastic#enabled = 1
 if !exists('g:airline_symbols')
-let g:airline_symbols = {}
+  let g:airline_symbols = {}
 endif
-let g:airline_left_sep           = '»'
-let g:airline_left_sep           = '▶'
-let g:airline_right_sep          = '«'
-let g:airline_right_sep          = '◀'
-let g:airline_symbols.linenr     = '␊'
-let g:airline_symbols.linenr     = '␤'
-let g:airline_symbols.linenr     = '¶'
+let g:airline_left_sep           = ''
+let g:airline_right_sep          = ''
 let g:airline_symbols.branch     = '⎇'
-let g:airline_symbols.paste      = 'ρ'
-let g:airline_symbols.paste      = 'Þ'
-let g:airline_symbols.paste      = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
 
 function! PlaySound(path)
   call system('aplay -qN ~/d/sounds/' . a:path . ' > /dev/null 2>&1 &')
@@ -199,3 +194,6 @@ if executable('aplay')
   autocmd EncodingChanged * call PlaySound('yumenikki/ＧＥＴ音２.WAV')
   autocmd VimResized      * call PlaySound('yumenikki/幽霊.WAV')
 endif
+
+" Syntastic
+let g:syntastic_javascript_checkers = ['jshint']
