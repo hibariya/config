@@ -138,10 +138,6 @@ nnoremap <unique> <silent> <space>tm :tabm<space>
 nnoremap <unique> <silent> <space>fi :NERDTree<CR>
 nnoremap <unique> <silent> <space>xx :qa<CR>
 nnoremap <unique> <silent> <space>XX :qa!<CR>
-nnoremap <unique> <silent> <Left>  :tabprevious <CR>
-nnoremap <unique> <silent> <Right> :tabnext <CR>
-nnoremap <unique> <silent> <Up>  :bprevious <CR>
-nnoremap <unique> <silent> <Down> :bnext <CR>
 
 cnoremap <C-x> <C-r>=expand('%:p:h')<CR>/
 
