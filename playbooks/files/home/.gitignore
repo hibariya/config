@@ -9,3 +9,4 @@ tmp/
 todo.txt
 .vagrant*
 .bundle
+portkey.json

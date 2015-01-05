@@ -7,6 +7,8 @@ call vundle#begin()
 Plugin 'Rename'
 Plugin 'bling/vim-airline'
 Plugin 'cucumber.zip'
+Plugin 'dsawardekar/ember.vim'
+Plugin 'dsawardekar/portkey'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'endwise.vim'
 Plugin 'gem.vim'
