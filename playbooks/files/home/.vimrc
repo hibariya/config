@@ -29,7 +29,6 @@ Plugin 'open-browser.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'quickrun.vim'
 Plugin 'rking/ag.vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-bundler'
@@ -199,3 +198,6 @@ endif
 
 " Syntastic
 let g:syntastic_javascript_checkers = ['jshint']
+
+" netrw
+let g:netrw_liststyle = 3
