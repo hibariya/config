@@ -10,3 +10,4 @@ todo.txt
 .vagrant*
 .bundle
 portkey.json
+.hubot_history
