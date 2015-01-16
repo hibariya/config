@@ -6,7 +6,7 @@
   ds = diff --staged
   co = checkout
   st = status
-  ci = commit
+  ci = commit --verbose
   br = branch
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   wip = "!sh -c 'git add -A; git ls-files --deleted -z | xargs -0 git rm; git commit -m \"wip\"'"
