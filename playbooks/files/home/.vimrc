@@ -197,7 +197,7 @@ if executable('aplay')
 endif
 
 " Syntastic
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['jshint', 'jscs']
 
 " netrw
 let g:netrw_liststyle = 3
