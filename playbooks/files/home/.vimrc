@@ -7,8 +7,6 @@ call vundle#begin()
 Plugin 'Rename'
 Plugin 'bling/vim-airline'
 Plugin 'cucumber.zip'
-Plugin 'dsawardekar/ember.vim'
-Plugin 'dsawardekar/portkey'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'endwise.vim'
 Plugin 'gem.vim'
@@ -49,7 +47,6 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'desert256.vim'
 Plugin 'jellybeans.vim'
 Plugin 'molokai'
-Plugin 'mrkn256.vim'
 Plugin 'newspaper.vim'
 Plugin 'pyte'
 Plugin 'tpope/vim-vividchalk'
@@ -160,7 +157,6 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=darkg
 let g:alignta_default_arguments = '<<0 \ /1'
 
 " airline
-"let g:airline_theme = 'bubblegum'
 let g:airline_theme = 'tomorrow'
 let g:airline#extensions#syntastic#enabled = 1
 if !exists('g:airline_symbols')
@@ -183,8 +179,8 @@ if executable('aplay')
   autocmd CompleteDone    * call PlaySound('yumenikki/決定音.WAV')
   autocmd CursorHold      * call PlaySound('yumenikki/キュ１.wav')
   autocmd CursorHoldI     * call PlaySound('yumenikki/キュ２.wav')
-  autocmd CursorMoved     * call PlaySound('yumenikki/足音_008.wav') " PlaySound('yumenikki/足音_012.WAV'), PlaySound('yumenikki/足音_013.WAV')
-  autocmd CursorMovedI    * call PlaySound('yumenikki/足音_007.WAV') " PlaySound('yumenikki/足音_001.wav')
+  autocmd CursorMoved     * call PlaySound('yumenikki/足音_008.wav')
+  autocmd CursorMovedI    * call PlaySound('yumenikki/足音_007.WAV')
   autocmd InsertEnter     * call PlaySound("yumenikki/赤.WAV")
   autocmd InsertLeave     * call PlaySound("yumenikki/青.WAV")
   autocmd QuickFixCmdPre  * call PlaySound('yumenikki/インフォ音.WAV')
