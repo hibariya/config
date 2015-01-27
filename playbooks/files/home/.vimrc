@@ -80,7 +80,7 @@ set mousehide
 set nobackup
 set nocompatible
 set noerrorbells
-set nowrap
+set wrap
 set number
 set shell=zsh
 set shiftwidth=2
