@@ -31,7 +31,7 @@ alias -g R='$(
   then
     git ls-files | xargs ls -At | head | peco
   else
-    ls -At **/*.*               | head | peco
+    ls -At **/*                 | head | peco
   fi
 )'
 
