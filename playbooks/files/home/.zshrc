@@ -19,11 +19,21 @@ alias emoji='open http://www.emoji-cheat-sheet.com/'
 alias h='history -E -32'
 alias ll='ls -laFG'
 alias tailf="tail -f"
-alias -g L=" | less "
-alias -g V=" | vim -R - "
 alias info='info --vi-keys'
 alias be='bundle exec'
-alias reload='source ~/.zshrc'
+
+alias -g L=" | less "
+alias -g V=" | vim -R - "
+alias -g R='$(
+  git status -s > /dev/null 2>&1
+
+  if [ $? -eq 0 ]
+  then
+    git ls-files | xargs ls -At | head | peco
+  else
+    ls -At **/*.*               | head | peco
+  fi
+)'
 
 function e {
   w=${@/\ /\\ }
