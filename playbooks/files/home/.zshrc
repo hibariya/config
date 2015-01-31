@@ -22,14 +22,12 @@ alias tailf="tail -f"
 alias -g L=" | less "
 alias -g V=" | vim -R - "
 alias info='info --vi-keys'
-alias bo='bundle open'
 alias be='bundle exec'
-alias bu='bundle update'
 alias reload='source ~/.zshrc'
 
-function v() { vim `echo $* | gsed -e "s/:\([0-9]\+\)/ +\1/"` }
 function e {
- grep --regexp=$1 ~/data/eijiro.utf8.txt | sed -e "s/"$1"/\\x1b[32m\\x1b[1m$(echo $1 | sed -e 's/[\^\$]//g')\\x1b[0m/g" | less
+  w=${@/\ /\\ }
+  grep --regexp=$w ~/data/eijiro.utf8.txt | sed -e "s/"$w"/\\x1b[36m\\x1b[1m$(echo $w | sed -e 's/[\^\$]//g')\\x1b[0m/g" | $PAGER
 }
 
 source ~/.zshenv
@@ -40,3 +38,6 @@ if ! [ $SCREENED = 1 ]; then
 
   screen -S leaf -qUmc .screen/leaf
 fi
+
+# added by travis gem
+[ -f /home/hibariya/.travis/travis.sh ] && source /home/hibariya/.travis/travis.sh
