@@ -11,6 +11,8 @@ compinit
 
 unsetopt CORRECT_ALL
 
+ulimit -c unlimited
+
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
