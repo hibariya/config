@@ -51,13 +51,13 @@ ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✎"
 
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-function prompt_char {
-	if [ $UID -eq 0 ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo "%{$fg[yellow]%}✿%{$reset_color%}"; fi
-}
+if [ $UID -eq 0 ]; then
+  prompt_char="%{$fg[red]%}#%{$reset_color%}"
+else
+  prompt_char="%{$fg[yellow]%}✴%{$reset_color%}"
+fi
 
-PROMPT='%{$fg[cyan]%}%n@%m:%~ [ %* ] %(?,%{$fg[cyan]%}[ ☀ $? ],%{$fg[red]%}[ ☂ $? ]) %{$fg[red]%}[ $(ruby -e "print RUBY_VERSION, %(p), RUBY_PATCHLEVEL") ] %{$fg[green]%}[ ± $(git_prompt_short_sha) -$(git_prompt_info) ]
-%{$fg[green]%}☘ $SHLVL %{$reset_color%}$(prompt_char) '
-#%{$fg[cyan]%}⧉ $SHLVL %{$reset_color%}$(prompt_char) '
-#%_$(prompt_char) '
+PROMPT='%{$fg[blue]%}%n@%m:%~ %(?,%{$fg[green]%}[ ☀ $? ],%{$fg[red]%}[ ☂ $? ])
+%{$fg[green]%}☘ $SHLVL%{$reset_color%} $prompt_char '
 
 RPROMPT=''
