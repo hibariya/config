@@ -1,0 +1,16 @@
+---
+parser: babel-eslint
+env:
+  node: true
+  browser: true
+rules:
+  comma-dangle: [2, never]
+  curly: 0
+  key-spacing: [2, { beforeColon: false, afterColon: true }]
+  new-cap: false # for vendor prefix
+  no-cond-assign: 0
+  no-multi-spaces: 0
+  no-unused-vars: 2
+  no-use-before-define: 0
+  quotes: [2, single]
+  strict: 0

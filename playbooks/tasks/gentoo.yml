@@ -12,6 +12,8 @@
   copy: src=files/home/{{item}} dest=~/{{item}}
 
   with_items:
+    - .eslintrc
+    - .jscsrc
     - .vimrc
     - .gvimrc
     - .zshrc
