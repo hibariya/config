@@ -24,3 +24,5 @@
   log = diff-highlight | less -X
   show = diff-highlight | less -X
   diff = diff-highlight | less -X
+[ghq]
+  root=~/src
