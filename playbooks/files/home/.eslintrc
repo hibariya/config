@@ -6,7 +6,7 @@ env:
 rules:
   comma-dangle: [2, never]
   curly: 0
-  key-spacing: [2, { beforeColon: false, afterColon: true }]
+  key-spacing: 0
   new-cap: false # for vendor prefix
   no-cond-assign: 0
   no-multi-spaces: 0
