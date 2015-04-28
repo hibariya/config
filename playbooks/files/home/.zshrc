@@ -6,6 +6,8 @@ export PATH=$HOME/.rbenv/bin:$HOME/bin:$PATH
 eval "$(rbenv init -)"
 source ~/.rbenv/completions/rbenv.zsh
 
+eval "$(direnv hook zsh)"
+
 autoload -U compinit zmv
 compinit
 
