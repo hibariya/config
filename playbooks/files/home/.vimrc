@@ -25,9 +25,11 @@ Plugin 'motemen/git-vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'open-browser.vim'
+Plugin 'phildawes/racer'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'quickrun.vim'
 Plugin 'rking/ag.vim'
+Plugin 'rust-lang/rust.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-bundler'
@@ -198,3 +200,8 @@ let g:syntastic_javascript_checkers = ['eslint', 'jshint', 'jscs']
 
 " netrw
 let g:netrw_liststyle = 3
+
+" racer
+set hidden
+let g:racer_cmd = "/home/hibariya/.vim/bundle/racer/target/release/racer"
+let $RUST_SRC_PATH="/home/hibariya/src/github.com/rust-lang/rust/src/"
