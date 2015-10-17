@@ -34,9 +34,9 @@ alias -g R='$(
 
   if [ $? -eq 0 ]
   then
-    git ls-files | xargs ls -At | head | peco
+    git ls-files | xargs ls -At | head -n 100 | peco
   else
-    ls -At **/*                 | head | peco
+    ls -At **/*                 | head -n 100 | peco
   fi
 )'
 
@@ -46,13 +46,6 @@ function e {
 }
 
 source ~/.zshenv
-
-if ! [ $SCREENED = 1 ]; then
-  export SCREENDIR=~/.screen/
-  export SCREENED=1
-
-  screen -S leaf -qUmc .screen/leaf
-fi
 
 # added by travis gem
 [ -f /home/hibariya/.travis/travis.sh ] && source /home/hibariya/.travis/travis.sh

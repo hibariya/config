@@ -23,8 +23,10 @@ Plugin 'matchit.zip'
 Plugin 'moro/vim-review'
 Plugin 'motemen/git-vim'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'mxw/vim-jsx'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'open-browser.vim'
+Plugin 'pangloss/vim-javascript'
 Plugin 'phildawes/racer'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'quickrun.vim'
@@ -61,15 +63,14 @@ call vundle#end()
 filetype plugin indent on
 syntax enable
 
-set t_Co=256
 set ambiwidth=double
 set autoindent
 set autoread
 set background=dark
 set backspace=2
 set clipboard+=unnamed
-set cursorline
 set completeopt=menuone,preview
+set cursorline
 set directory-=.
 set expandtab
 set foldmethod=marker
@@ -83,17 +84,18 @@ set mousehide
 set nobackup
 set nocompatible
 set noerrorbells
-set wrap
 set number
 set shell=zsh
 set shiftwidth=2
 set showmatch
 set smartcase
+set t_Co=256
 set tabstop=2
 set title
 set ttymouse=xterm2
 set undolevels=1000
 set wildmode=list:longest
+set wrap
 set wrapscan
 
 if !empty(globpath(&rtp, 'colors/vividchalk.vim'))
@@ -169,32 +171,6 @@ let g:airline_left_sep           = ''
 let g:airline_right_sep          = ''
 let g:airline_symbols.branch     = '⎇'
 
-function! PlaySound(path)
-  call system('aplay -qN ~/d/sounds/' . a:path . ' > /dev/null 2>&1 &')
-endfunction
-
-if executable('aplay')
-  autocmd BufRead         * call PlaySound('yumenikki/カラリロロ.WAV')
-  "autocmd BufEnter        * call PlaySound('yumenikki/FC移動.WAV')
-  autocmd BufWritePost    * call PlaySound('yumenikki/エフェクト使用.WAV') "PlaySound('yumenikki/キャー１.WAV')
-  autocmd CmdwinEnter     * call PlaySound('yumenikki/ＧＥＴ音１.WAV')
-  autocmd ColorScheme     * call PlaySound('yumenikki/Sbend.WAV')
-  autocmd CompleteDone    * call PlaySound('yumenikki/決定音.WAV')
-  autocmd CursorHold      * call PlaySound('yumenikki/キュ１.wav')
-  autocmd CursorHoldI     * call PlaySound('yumenikki/キュ２.wav')
-  autocmd CursorMoved     * call PlaySound('yumenikki/足音_008.wav')
-  autocmd CursorMovedI    * call PlaySound('yumenikki/足音_007.WAV')
-  autocmd InsertEnter     * call PlaySound("yumenikki/赤.WAV")
-  autocmd InsertLeave     * call PlaySound("yumenikki/青.WAV")
-  autocmd QuickFixCmdPre  * call PlaySound('yumenikki/インフォ音.WAV')
-  autocmd ShellCmdPost    * call PlaySound('yumenikki/猫.WAV')
-  autocmd SwapExists      * call PlaySound('yumenikki/ブザー１.WAV')
-  autocmd VimEnter        * call PlaySound('yumenikki/Sbend.WAV')
-  autocmd VimLeave        * call PlaySound('yumenikki/頬をつねる.WAV')
-  autocmd EncodingChanged * call PlaySound('yumenikki/ＧＥＴ音２.WAV')
-  autocmd VimResized      * call PlaySound('yumenikki/幽霊.WAV')
-endif
-
 " Syntastic
 let g:syntastic_javascript_checkers = ['eslint', 'jshint', 'jscs']
 
@@ -205,3 +181,6 @@ let g:netrw_liststyle = 3
 set hidden
 let g:racer_cmd = "/home/hibariya/.vim/bundle/racer/target/release/racer"
 let $RUST_SRC_PATH="/home/hibariya/src/github.com/rust-lang/rust/src/"
+
+" jsx
+let g:jsx_ext_required = 0

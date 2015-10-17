@@ -1,1 +1,28 @@
-source .screen/leaf
+multiuser off
+idle off
+
+escape "^Tt"
+bind "w" windowlist -b
+bind "^]" paste "[.]"
+bind "u" encoding "UTF-8"
+bind "e" encoding "eucJP"
+bind "s" encoding "SJIS"
+bind "J" focus "down"
+bind "K" focus "up"
+bind "H" focus "left"
+bind "L" focus "right"
+bind k eval 'exec cat' kill redisplay
+
+shell "zsh"
+markkeys "h=^B:l=^F:$=^E:^U=^Z:^D=^V"
+msgwait 3
+msgminwait 2
+defscrollback 8192
+
+defbce on
+term screen-bce
+
+caption always "%?%F%{=r ..}%?%-Lw%40L>%?%F%{=b dR}%?%n%f* %t%?%F%{-}%?%+Lw"
+sorendition "+rb kc"
+
+chdir

@@ -1,9 +1,0 @@
-# .screenrc by Urabe Shyouhei.
-
-# This is for "root" screen, which recursively invokes screen
-source defaults
-
-caption always "%0`%=%1`"
-backtick 0 0 0 cline tick 15
-
-screen screen -S stem3 -qUmc .screen/stem3

@@ -24,9 +24,3 @@
     - .gitignore
     - .tigrc
     - .screenrc
-    - .screen/leaf
-    - .screen/defaults
-    - .screen/stem1
-    - .screen/stem2
-    - .screen/stem3
-    - .screen/stem4
