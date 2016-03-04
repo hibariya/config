@@ -43,21 +43,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-ruby/vim-ruby'
 
 "colorscheme
-
-Plugin 'DarkZen-Color-Scheme'
-Plugin 'Lokaltog/vim-distinguished'
-Plugin 'Wombat'
-Plugin 'Zenburn'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'desert256.vim'
-Plugin 'jellybeans.vim'
-Plugin 'molokai'
-Plugin 'newspaper.vim'
-Plugin 'pyte'
 Plugin 'tpope/vim-vividchalk'
-Plugin 'twilight'
-Plugin 'vim_colors'
-Plugin 'xoria256.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -80,7 +66,7 @@ set hlsearch
 set ignorecase
 set incsearch
 set laststatus=2
-set mousehide
+set mouse=a
 set nobackup
 set nocompatible
 set noerrorbells
@@ -135,10 +121,8 @@ let g:git_command_edit = 'rightbelow vnew'
 nnoremap <unique> <silent> TN :tabnext<CR>
 nnoremap <unique> <silent> TP :tabprevious<CR>
 nnoremap <unique> <silent> <space>ta :tabnew<CR>:e .<CR>
-nnoremap <unique> <silent> <space>tm :tabm<space>
 nnoremap <unique> <silent> <space>fi :NERDTree<CR>
 nnoremap <unique> <silent> <space>xx :qa<CR>
-nnoremap <unique> <silent> <space>XX :qa!<CR>
 
 cnoremap <C-x> <C-r>=expand('%:p:h')<CR>/
 

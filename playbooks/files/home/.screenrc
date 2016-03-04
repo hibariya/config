@@ -18,6 +18,7 @@ markkeys "h=^B:l=^F:$=^E:^U=^Z:^D=^V"
 msgwait 3
 msgminwait 2
 defscrollback 8192
+altscreen on
 
 defbce on
 term screen-bce

@@ -11,3 +11,5 @@ todo.txt
 .bundle
 portkey.json
 .hubot_history
+.envrc
+.gradle
