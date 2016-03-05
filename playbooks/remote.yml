@@ -1,4 +1,0 @@
-- hosts: remote
-  tasks:
-    - include: tasks/remote.yml
-    - include: tasks/base.yml

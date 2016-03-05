@@ -2,11 +2,8 @@
 - name: Make .ssh directory
   file: path=~/.ssh state=directory
 
-- name: Make .zsh directory
-  file: path=~/.zsh state=directory
-
-- name: Make .screen directory
-  file: path=~/.screen state=directory
+- name: Make .config directory
+  file: path=~/.config state=directory
 
 - name: Copy my dotfiles
   copy: src=files/home/{{item}} dest=~/{{item}}
@@ -16,11 +13,10 @@
     - .jscsrc
     - .vimrc
     - .gvimrc
-    - .zshrc
-    - .zsh/oh-my-zsh
+    - .tmux.conf
+    - .config/fish/config.fish
     - .ssh/config
     - .irbrc
     - .gitconfig
     - .gitignore
     - .tigrc
-    - .screenrc
