@@ -32,6 +32,16 @@ function e
   grep --regexp=$argv ~/data/eijiro.utf8.txt | sed -e "s/$argv/\\x1b[36m\\x1b[1m$word\\x1b[0m/g" | eval $PAGER
 end
 
+function peco_select_history
+  if set -q $argv
+    history | peco | read cmd
+  else
+    history | peco --query $argv | read cmd
+  end
+
+  commandline $cmd
+end
+
 function repo
   ghq list -p | peco | read there
   cd $there
@@ -41,3 +51,11 @@ function vimr
   git ls-files | xargs ls -At | peco | read that
   vim $that
 end
+
+function fish_user_key_bindings
+  bind \cr peco_select_history
+end
+
+set fisher_home ~/.local/share/fisherman
+set fisher_config ~/.config/fisherman
+source $fisher_home/config.fish
