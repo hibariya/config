@@ -2,8 +2,8 @@
 - name: Make .ssh directory
   file: path=~/.ssh state=directory
 
-- name: Make .config directory
-  file: path=~/.config state=directory
+- name: Make .config/fish directory
+  file: path=~/.config/fish state=directory
 
 - name: Copy my dotfiles
   copy: src=files/home/{{item}} dest=~/{{item}}
