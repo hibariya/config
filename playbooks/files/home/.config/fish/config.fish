@@ -15,17 +15,9 @@ eval (direnv hook fish)
 
 ssh-add ~/.ssh/id_dsa
 
-function g
-  git $argv
-end
-
-function be
-  bundle exec $argv
-end
-
-function ll
-  ls -lh $argv
-end
+abbr -a be='bundle exec'
+abbr -a g='git'
+abbr -a ll='ls -lh'
 
 function e
   echo $argv | sed -e 's/[\^\$]//g' | read word
