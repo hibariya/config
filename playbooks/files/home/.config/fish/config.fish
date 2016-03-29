@@ -1,19 +1,18 @@
-set PATH $HOME/bin $HOME/src/bin $PATH
+set -x PATH $HOME/bin $HOME/src/bin $PATH
 
-set PATH $HOME/.rbenv/bin $PATH
-set PATH $HOME/.rbenv/shims $PATH
+set -x PATH $HOME/.rbenv/bin $PATH
+set -x PATH $HOME/.rbenv/shims $PATH
 rbenv rehash >/dev/null ^&1
 source ~/.rbenv/completions/rbenv.fish
 
-set PATH $HOME/.nodebrew/current/bin $PATH
+set -x PATH $HOME/.nodebrew/current/bin $PATH
+source ~/.nodebrew/completions/fish/nodebrew.fish
 
-set PATH $HOME/.cargo/bin $PATH
+set -x PATH $HOME/.cargo/bin $PATH
 
-set GOPATH $HOME
+set -x GOPATH $HOME
 
 eval (direnv hook fish)
-
-ssh-add ~/.ssh/id_dsa
 
 abbr -a be='bundle exec'
 abbr -a g='git'
