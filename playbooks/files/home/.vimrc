@@ -83,7 +83,7 @@ set title
 set ttymouse=xterm2
 set undolevels=1000
 set wildmode=list:longest
-set wrap
+set nowrap
 set wrapscan
 
 if !empty(globpath(&rtp, 'colors/vividchalk.vim'))
