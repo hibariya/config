@@ -170,3 +170,9 @@ let $RUST_SRC_PATH="/home/hibariya/src/github.com/rust-lang/rust/src/"
 
 " jsx
 let g:jsx_ext_required = 0
+
+" completion
+autocmd FileType * execute 'setlocal dict+=~/.vim/'.&filetype.'.dict'
+
+"asm
+autocmd BufRead,BufNewFile *.s set filetype=nasm
