@@ -26,3 +26,7 @@
   diff = diff-highlight | less -X
 [ghq]
   root=~/src
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+[diff]
+	compactionHeuristic = true
