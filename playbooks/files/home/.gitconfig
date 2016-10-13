@@ -1,6 +1,7 @@
 [user]
   name = Hika Hibariya
   email = hibariya@gmail.com
+	signingkey = 2A599B0EE665237E
 [alias]
   pr = pull --rebase --prune
   ds = diff --staged
@@ -8,9 +9,6 @@
   st = status
   ci = commit --verbose
   br = branch
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  wip = "!sh -c 'git add -A; git ls-files --deleted -z | xargs -0 git rm; git commit -m \"wip\"'"
-  unwip = "!sh -c 'git log -n 1 | grep -q -c wip && git reset HEAD~1'"
 [core]
   editor = vim
   excludesfile = ~/.gitignore

@@ -17,6 +17,7 @@ eval (direnv hook fish)
 abbr -a be='bundle exec'
 abbr -a g='git'
 abbr -a ll='ls -lh'
+abbr -a cta='ctags -R (git ls-files)'
 
 function e
   echo $argv | sed -e 's/[\^\$]//g' | read word

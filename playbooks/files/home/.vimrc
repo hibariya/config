@@ -5,9 +5,14 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'Rename'
+Plugin 'Shougo/neomru.vim'
+Plugin 'Shougo/unite-outline'
+Plugin 'Shougo/unite.vim'
 Plugin 'bling/vim-airline'
 Plugin 'cucumber.zip'
+Plugin 'dag/vim-fish'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'elixir-lang/vim-elixir'
 Plugin 'endwise.vim'
 Plugin 'fatih/vim-go'
 Plugin 'gem.vim'
@@ -148,17 +153,16 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=darkg
 let g:alignta_default_arguments = '<<0 \ /1'
 
 " airline
-let g:airline_theme = 'tomorrow'
+let g:airline_theme = 'cobalt2'
 let g:airline#extensions#syntastic#enabled = 1
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 let g:airline_left_sep           = ''
 let g:airline_right_sep          = ''
-let g:airline_symbols.branch     = '⎇'
 
 " Syntastic
-let g:syntastic_javascript_checkers = ['eslint', 'jshint', 'jscs']
+let g:syntastic_javascript_checkers = ['eslint']
 
 " netrw
 let g:netrw_liststyle = 3
