@@ -4,6 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'airblade/vim-gitgutter'
 Plugin 'Rename'
 Plugin 'Shougo/neomru.vim'
 Plugin 'Shougo/unite-outline'
@@ -25,6 +26,7 @@ Plugin 'kana/vim-textobj-entire'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
 Plugin 'matchit.zip'
 Plugin 'moro/vim-review'
 Plugin 'motemen/git-vim'
@@ -128,8 +130,9 @@ let g:git_command_edit = 'rightbelow vnew'
 nnoremap <unique> <silent> TN :tabnext<CR>
 nnoremap <unique> <silent> TP :tabprevious<CR>
 nnoremap <unique> <silent> <space>ta :tabnew<CR>:e .<CR>
-nnoremap <unique> <silent> <space>fi :NERDTree<CR>
 nnoremap <unique> <silent> <space>xx :qa<CR>
+nnoremap <unique> <silent> <space>u :Unite<space>
+nnoremap <unique> <silent> <space>ou :TagbarToggle<CR>
 
 cnoremap <C-x> <C-r>=expand('%:p:h')<CR>/
 
