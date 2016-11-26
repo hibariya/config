@@ -4,11 +4,11 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'airblade/vim-gitgutter'
 Plugin 'Rename'
 Plugin 'Shougo/neomru.vim'
 Plugin 'Shougo/unite-outline'
 Plugin 'Shougo/unite.vim'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'cucumber.zip'
 Plugin 'dag/vim-fish'
@@ -50,6 +50,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'wilsaj/chuck.vim'
 
 "colorscheme
 Plugin 'tpope/vim-vividchalk'
