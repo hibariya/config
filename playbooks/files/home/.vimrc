@@ -121,8 +121,9 @@ autocmd QuickfixCmdPost lmake,lgrep,lgrepadd,lvimgrep,lvimgrepadd lwin
 inoremap <Leader>Date <C-R>=strftime('%Y/%m/%d(%a)')<CR>
 inoremap <Leader>Time <C-R>=strftime('%H:%M:%S')<CR>
 
-" complement
+" completion
 inoremap <C-f> <C-x><C-o>
+set iskeyword+=\-
 
 " git-vim
 let g:git_command_edit = 'rightbelow vnew'
