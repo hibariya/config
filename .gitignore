@@ -1,4 +1,0 @@
-_ssh/*_rsa*
-_ssh/known_hosts
-tmp/*
-_screen/.termcap
