@@ -1,4 +1,0 @@
-- hosts: gentoo
-  tasks:
-    - include: tasks/gentoo.yml
-    - include: tasks/base.yml
