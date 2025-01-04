@@ -22,6 +22,7 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
 set number
+set nowrap
 
 set hidden " Switch buffers w/o having to save first
 set laststatus=2
