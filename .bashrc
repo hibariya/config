@@ -6,4 +6,4 @@ export HISTCONTROL=ignoreboth
 
 shopt -s histappend
 
-export PS1="\e[0;33m[\u@\h \w \t $?]\$ \e[m"
+export PS1="\e[0;33m[\u@\h \w \t \$?]\$ \e[m"
