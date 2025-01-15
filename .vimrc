@@ -38,6 +38,9 @@ set hlsearch " Highlight
 set incsearch " Start searching before hitting enter
 set wrapscan " Return to the first match after the end
 
+set ignorecase
+set smartcase
+
 set ttyfast " Render faster
 set lazyredraw
 
